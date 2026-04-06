@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,206 +12,330 @@
   <!-- Font Awesome for social & feature icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const closeHommesu = document.getElementById("closeHommesu");
+    const mobileSidebar = document.getElementById("mobileSidebar");
+    const sidebarOverlay = document.getElementById("sidebarOverlay");
+    const mobileLinks = document.querySelectorAll(".mobile-nav a");
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", function () {
+        mobileSidebar.classList.add("active");
+        sidebarOverlay.classList.add("active");
+      });
+    }
+
+    if (closeHommesu) {
+      closeHommesu.addEventListener("click", function () {
+        mobileSidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
+      });
+    }
+
+    if (sidebarOverlay) {
+      sidebarOverlay.addEventListener("click", function () {
+        mobileSidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
+      });
+    }
+
+    mobileLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileSidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
+      });
+    });
+  });
+</script>
+
 <body>
   <!-- Header / Navigation -->
-  <header>
-    <div class="container nav-container">
-      <a href="#hero" class="logo-link">
-      <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" class="logo" />
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" />
+        <span>Golden Fitness</span>
       </a>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#facilities">Facilities</a></li>
-          <li><a href="#rules">Rules</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+
+      <nav class="desktop-nav">
+        <a href="#about">À propos</a>
+        <a href="#schedule">Planning</a>
+        <a href="#pricing">Tarifs</a>
+        <a href="#facilities">Équipements</a>
+        <a href="#rules">Règlement</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <a class="btn btn-small desktop-btn" href="#contact">S'inscrire</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-<section id="hero" class="hero-section">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <p class="hero-kicker">Golden Fitness • El Harrach</p>
-
-    <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" class="hero-logo">
-
-    <h1>Train Serious.<br>Get Results.</h1>
-
-    <p class="hero-tagline">
-      Welcome to Golden Fitness — a modern gym for people who mean business.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Join Now</a>
-      <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+  <div class="mobile-sidebar" id="mobileSidebar">
+    <div class="mobile-sidebar-header">
+      <span>GOLDEN FITNESS</span>
+      <button class="close-menu" id="closeHommesu" aria-label="Fermer le menu">&times;</button>
     </div>
 
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <strong>Musculation</strong>
-        <span>Modern equipment</span>
-      </div>
-      <div class="hero-stat">
-        <strong>Cardio</strong>
-        <span>Bikes & treadmills</span>
-      </div>
-      <div class="hero-stat">
-        <strong>Serious Gym</strong>
-        <span>Clean & disciplined</span>
-      </div>
-    </div>
+    <nav class="mobile-nav">
+      <a href="#about">À propos</a>
+      <a href="#schedule">Planning</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="#facilities">Équipements</a>
+      <a href="#rules">Règlement</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-</section>
-  <!-- Gallery Section -->
-<div class="gallery">
-  <img class="big" src="assets/main.png">
-  <img src="assets/1.jpg">
-  <img src="assets/2.webp">
-  <img src="assets/3.webp">
-  <img src="assets/4.webp">
-</div>
 
-  <!-- About Section -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">Golden Fitness • El Harrach</p>
+
+      <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" class="hero-logo">
+
+      <h1>Entraîne-toi sérieusement.<br>Obtiens des résultats.</h1>
+
+      <p class="hero-tagline">
+        Bienvenue chez Golden Fitness — une salle moderne pour ceux qui veulent vraiment progresser.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">S'inscrire</a>
+        <a href="#pricing" class="btn btn-secondary">Voir les tarifs</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>Musculation</strong>
+          <span>Équipements modernes</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Cardio</strong>
+          <span>Bikes & treadmills</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Salle sérieuse</strong>
+          <span>Propre et sérieux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery Section -->
+  <div class="gallery">
+    <img class="big" src="assets/main.png">
+    <img src="assets/1.jpg">
+    <img src="assets/2.webp">
+    <img src="assets/3.webp">
+    <img src="assets/4.webp">
+  </div>
+
+  <!-- À propos Section -->
   <section id="about" class="section about-section">
     <div class="container">
-      <h2>About Golden Fitness</h2>
+      <h2>À propos Golden Fitness</h2>
       <p>
-        Golden Fitness is a serious training environment located in El Harrach, Algeria. We offer high‑quality weight and cardio
-        equipment, structured training plans and a disciplined community that empowers you to achieve your goals. Whether you are
-        new to the gym or an experienced athlete, our coaches and facilities will help you progress safely and effectively.
+        Golden Fitness est un environnement d’entraînement sérieux situé à El Harrach, en Algérie.
+        Nous proposons des équipements de musculation et de cardio de haute qualité, des programmes
+        structurés et une communauté disciplinée pour vous aider à atteindre vos objectifs.
+        Que vous soyez débutant ou athlète confirmé, notre salle et nos coachs vous accompagnent
+        pour progresser efficacement et en toute sécurité.
       </p>
     </div>
   </section>
 
-  <!-- Schedule Section -->
+  <!-- Planning Section -->
   <section id="schedule" class="section schedule-section">
     <div class="container">
-      <h2>Training Schedule</h2>
+      <h2>Planning d'entraînement</h2>
       <div class="schedule-tables">
         <div class="schedule-table">
-          <h3>Women</h3>
+          <h3>Femmes</h3>
           <table>
             <thead>
               <tr>
-                <th>Day</th>
-                <th>Start</th>
-                <th>End</th>
+                <th>Jour</th>
+                <th>Début</th>
+                <th>Fin</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>Saturday</td><td>12:00</td><td>16:45</td></tr>
-              <tr><td>Sunday</td><td>12:00</td><td>16:45</td></tr>
-              <tr><td>Monday</td><td>12:00</td><td>18:45</td></tr>
-              <tr><td>Tuesday</td><td>12:00</td><td>16:45</td></tr>
-              <tr><td>Wednesday</td><td>12:00</td><td>18:45</td></tr>
-              <tr><td>Thursday</td><td>12:00</td><td>16:45</td></tr>
-              <tr><td>Friday</td><td>14:00</td><td>17:45</td></tr>
+              <tr>
+                <td>Samedi</td>
+                <td>12:00</td>
+                <td>16:45</td>
+              </tr>
+              <tr>
+                <td>Dimanche</td>
+                <td>12:00</td>
+                <td>16:45</td>
+              </tr>
+              <tr>
+                <td>Lundi</td>
+                <td>12:00</td>
+                <td>18:45</td>
+              </tr>
+              <tr>
+                <td>Mardi</td>
+                <td>12:00</td>
+                <td>16:45</td>
+              </tr>
+              <tr>
+                <td>Mercredi</td>
+                <td>12:00</td>
+                <td>18:45</td>
+              </tr>
+              <tr>
+                <td>Jeudi</td>
+                <td>12:00</td>
+                <td>16:45</td>
+              </tr>
+              <tr>
+                <td>Vendredi</td>
+                <td>14:00</td>
+                <td>17:45</td>
+              </tr>
             </tbody>
           </table>
         </div>
         <div class="schedule-table">
-          <h3>Men</h3>
+          <h3>Hommes</h3>
           <table>
             <thead>
               <tr>
-                <th>Day</th>
-                <th>Morning</th>
-                <th>Evening</th>
+                <th>Jour</th>
+                <th>Matin</th>
+                <th>Soir</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>Saturday</td><td>08:00 – 11:45</td><td>17:00 – 23:00</td></tr>
-              <tr><td>Sunday</td><td>06:00 – 11:45</td><td>17:00 – 23:00</td></tr>
-              <tr><td>Monday</td><td>06:00 – 11:45</td><td>19:00 – 23:00</td></tr>
-              <tr><td>Tuesday</td><td>06:00 – 11:45</td><td>17:00 – 23:00</td></tr>
-              <tr><td>Wednesday</td><td>06:00 – 11:45</td><td>19:00 – 23:00</td></tr>
-              <tr><td>Thursday</td><td>06:00 – 11:45</td><td>17:00 – 23:00</td></tr>
-              <tr><td>Friday</td><td>08:00 – 11:45</td><td>18:00 – 23:00</td></tr>
+              <tr>
+                <td>Samedi</td>
+                <td>08:00 – 11:45</td>
+                <td>17:00 – 23:00</td>
+              </tr>
+              <tr>
+                <td>Dimanche</td>
+                <td>06:00 – 11:45</td>
+                <td>17:00 – 23:00</td>
+              </tr>
+              <tr>
+                <td>Lundi</td>
+                <td>06:00 – 11:45</td>
+                <td>19:00 – 23:00</td>
+              </tr>
+              <tr>
+                <td>Mardi</td>
+                <td>06:00 – 11:45</td>
+                <td>17:00 – 23:00</td>
+              </tr>
+              <tr>
+                <td>Mercredi</td>
+                <td>06:00 – 11:45</td>
+                <td>19:00 – 23:00</td>
+              </tr>
+              <tr>
+                <td>Jeudi</td>
+                <td>06:00 – 11:45</td>
+                <td>17:00 – 23:00</td>
+              </tr>
+              <tr>
+                <td>Vendredi</td>
+                <td>08:00 – 11:45</td>
+                <td>18:00 – 23:00</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <p class="note">*Schedules may vary during holidays and special events. Please contact us for the most up‑to‑date timetable.</p>
+      <p class="note">
+        *Les horaires peuvent varier pendant les jours fériés et événements spéciaux.
+        Contactez-nous pour les informations les plus récentes.
+      </p>
     </div>
   </section>
 
-  <!-- Pricing Section -->
+  <!-- Tarifs Section -->
   <section id="pricing" class="section pricing-section">
     <div class="container">
-      <h2>Membership Plans</h2>
+      <h2>Abonnements</h2>
       <div class="pricing-cards">
         <div class="pricing-card">
-          <h3>Student Plan</h3>
-          <p class="price">9 000 DA<span class="small"> / 3 months</span></p>
+          <h3>Offre étudiante</h3>
+          <p class="price">9 000 DA<span class="small"> / 3 mois</span></p>
           <ul>
-            <li>Full gym access during regular hours</li>
-            <li>Access to all equipment</li>
-            <li>Ideal for students and young athletes</li>
+            <li>Accès complet à la salle pendant les horaires normaux</li>
+            <li>Accès à tous les équipements</li>
+            <li>Idéal pour les étudiants et les jeunes sportifs</li>
           </ul>
         </div>
         <div class="pricing-card">
-          <h3>Women’s Membership</h3>
-          <p class="price">1 Month</p>
+          <h3>Abonnement Femmes</h3>
+          <p class="price">1 Mois</p>
           <ul>
-            <li>Musculation: 3 sessions / week – 3 000 DA</li>
-            <li>Musculation: open access – 4 000 DA</li>
-            <li>Fitness: 3 sessions / week – 3 000 DA</li>
-            <li>Fitness: open access – 4 000 DA</li>
-            <li>Musculation & Fitness: 3 sessions / week – 4 500 DA</li>
-            <li>Musculation & Fitness: open access – 5 900 DA</li>
-            <li>3 Month open pass – 17 000 DA</li>
+            <li>Musculation: 3 séances / semaine – 3 000 DA</li>
+            <li>Musculation: Accès libre – 4 000 DA</li>
+            <li>Fitness: 3 séances / semaine – 3 000 DA</li>
+            <li>Fitness: Accès libre – 4 000 DA</li>
+            <li>Musculation & Fitness: 3 séances / semaine – 4 500 DA</li>
+            <li>Musculation & Fitness: Accès libre – 5 900 DA</li>
+            <li>3 Mois open pass – 17 000 DA</li>
           </ul>
         </div>
         <div class="pricing-card">
-          <h3>Men’s Membership</h3>
-          <p class="price">1 Month</p>
+          <h3>Abonnement Hommes</h3>
+          <p class="price">1 Mois</p>
           <ul>
-            <li>3 sessions / week – 4 500 DA</li>
-            <li>Open access – 5 900 DA</li>
+            <li>3 séances / semaine – 4 500 DA</li>
+            <li>Accès libre – 5 900 DA</li>
           </ul>
-          <p class="price">3 Months</p>
+          <p class="price">3 mois</p>
           <ul>
-            <li>3 sessions / week – 13 000 DA</li>
-            <li>Open access – 17 000 DA</li>
+            <li>3 séances / semaine – 13 000 DA</li>
+            <li>Accès libre – 17 000 DA</li>
           </ul>
-          <p class="price">6 Months</p>
+          <p class="price">6 mois</p>
           <ul>
-            <li>Open access – 33 000 DA</li>
+            <li>Accès libre – 33 000 DA</li>
           </ul>
-          <p class="price">12 Months</p>
+          <p class="price">12 mois</p>
           <ul>
-            <li>Open access – 65 000 DA</li>
+            <li>Accès libre – 65 000 DA</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Facilities Section -->
+  <!-- Équipements Section -->
   <section id="facilities" class="section facilities-section">
     <div class="container">
-      <h2>Facilities & Services</h2>
+      <h2>Équipements & Services</h2>
       <div class="facilities-grid">
         <div class="facility">
           <i class="fas fa-dumbbell"></i>
-          <h4>Weight Training</h4>
-          <p>Complete free‑weight and resistance machine area for strength gains.</p>
+          <h4>Musculation</h4>
+          <p>Espace complet de musculation avec poids libres et machines.</p>
         </div>
         <div class="facility">
           <i class="fas fa-running"></i>
-          <h4>Cardio Equipment</h4>
+          <h4>Équipements cardio</h4>
           <p>Treadmills, bikes and rowers to improve endurance and burn fat.</p>
         </div>
         <div class="facility">
           <i class="fas fa-users"></i>
-          <h4>Group Classes</h4>
-          <p>Join our collective training sessions for extra motivation and fun.</p>
+          <h4>Cours collectifs</h4>
+          <p>Join our collective training séances for extra motivation and fun.</p>
         </div>
         <div class="facility">
           <i class="fas fa-user-check"></i>
@@ -219,59 +344,51 @@
         </div>
         <div class="facility">
           <i class="fas fa-shower"></i>
-          <h4>Showers & Lockers</h4>
+          <h4>Douches et vestiaires</h4>
           <p>Clean changing rooms with showers and secure lockers.</p>
         </div>
         <div class="facility">
           <i class="fas fa-heartbeat"></i>
-          <h4>Serious Environment</h4>
+          <h4>Environnement sérieux</h4>
           <p>No nonsense training floor – respect the equipment and focus on your goals.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Rules Section -->
+  <!-- Règlement Section -->
   <section id="rules" class="section rules-section">
     <div class="container">
-      <h2>Gym Rules</h2>
+      <h2>Règlement</h2>
       <ul class="rules-list">
-        <li><i class="fas fa-check-circle"></i> Always carry a towel and use it to wipe equipment after use.</li>
-        <li><i class="fas fa-check-circle"></i> Wear clean shoes on the training floor.</li>
-        <li><i class="fas fa-check-circle"></i> Follow your scheduled training times.</li>
-        <li><i class="fas fa-check-circle"></i> Respect other members and the equipment.</li>
-        <li><i class="fas fa-check-circle"></i> Maintain personal hygiene and keep the gym clean.</li>
+        <li><i class="fas fa-check-circle"></i> Utilisez toujours une serviette et nettoyez les équipements après usage.
+        </li>
+        <li><i class="fas fa-check-circle"></i> Portez des chaussures propres sur le plateau d'entraînement.</li>
+        <li><i class="fas fa-check-circle"></i> Respectez vos horaires d'entraînement.</li>
+        <li><i class="fas fa-check-circle"></i> Respectez les autres adhérents et le matériel.</li>
+        <li><i class="fas fa-check-circle"></i> Maintenez une bonne hygiène personnelle et gardez la salle propre.</li>
       </ul>
     </div>
   </section>
 
-   <!-- MAPS -->
+  <!-- MAPS -->
   <section id="map" class="section map-section">
-  <div class="container">
-    <h2>Notre localisation</h2>
-    <p class="map-text">
-      Golden Fitness – El Harrach, Alger
-    </p>
+    <div class="container">
+      <h2>Notre localisation</h2>
+      <p class="map-text">
+        Golden Fitness – El Harrach, Alger
+      </p>
 
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps?q=36.72675138611782,3.138282004895905&z=15&output=embed"
-        width="100%"
-        height="100%"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=36.72675138611782,3.138282004895905&z=15&output=embed" width="100%"
+          height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
     </div>
-  </div>
-  <a 
-  href="https://www.google.com/maps?q=36.72675138611782,3.138282004895905"
-  target="_blank"
-  class="btn"
->
-  Ouvrir dans Google Maps
-</a>
-</section>
+    <a href="https://www.google.com/maps?q=36.72675138611782,3.138282004895905" target="_blank" class="btn">
+      Ouvrir dans Google Maps
+    </a>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section contact-section">
@@ -298,8 +415,10 @@
         </div>
       </div>
       <div class="social-links">
-        <a href="https://instagram.com/golden.fitness.dz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://facebook.com/GoldenFitnessdz" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/golden.fitness.dz" target="_blank" aria-label="Instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/GoldenFitnessdz" target="_blank" aria-label="Facebook"><i
+            class="fab fa-facebook"></i></a>
         <!-- WhatsApp using phone number -->
         <a href="https://wa.me/213776252447" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
@@ -309,9 +428,8 @@
   <!-- Footer -->
   <footer>
     <div class="container footer-content">
-      <p>© 2026 Golden Fitness. All rights reserved.</p>
-      <p class="small">Built by your web assistant.</p>
-    </div>
+      <p>© 2026 Golden Fitness. Tous droits réservés.</p>
+      < </div>
   </footer>
 
   <script>
@@ -328,4 +446,5 @@
     });
   </script>
 </body>
+
 </html>
