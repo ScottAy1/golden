@@ -301,6 +301,8 @@
         <input id="leadName" name="text" type="text" placeholder="Votre nom" data-i18n-placeholder="formNamePlaceholder" required>
         <label for="leadPhone" data-i18n="formPhone">Telephone</label>
         <input id="leadPhone" type="tel" placeholder="Votre numero" data-i18n-placeholder="formPhonePlaceholder" required>
+        <label for="leadAge" data-i18n="formAge">Age</label>
+        <input id="leadAge" type="number" min="12" max="99" placeholder="Votre age" data-i18n-placeholder="formAgePlaceholder" required>
         <label for="leadGoal" data-i18n="formGoal">Objectif</label>
         <select id="leadGoal">
           <option value="Perte de poids" data-i18n="goalOpt1">Perte de poids</option>
@@ -453,6 +455,8 @@
           formNamePlaceholder: "Votre nom",
           formPhone: "Telephone",
           formPhonePlaceholder: "Votre numero",
+          formAge: "Age",
+          formAgePlaceholder: "Votre age",
           formGoal: "Objectif",
           goalOpt1: "Perte de poids",
           goalOpt2: "Prise de muscle",
@@ -571,6 +575,8 @@
           formNamePlaceholder: "اسمك",
           formPhone: "الهاتف",
           formPhonePlaceholder: "رقمك",
+          formAge: "العمر",
+          formAgePlaceholder: "عمرك",
           formGoal: "الهدف",
           goalOpt1: "خسارة الوزن",
           goalOpt2: "زيادة العضلات",
@@ -737,10 +743,15 @@
       leadForm.addEventListener("submit", function () {
         const textInput = document.getElementById("leadName");
         const phone = document.getElementById("leadPhone").value.trim();
+        const age = document.getElementById("leadAge").value.trim();
         const goal = document.getElementById("leadGoal").value;
         const lang = document.documentElement.lang === "ar" ? "ar" : "fr";
-        const intro = lang === "ar" ? "مرحبا، اسمي" : "Bonjour, je m'appelle";
-        textInput.value = intro + " " + textInput.value.trim() + ", phone: " + phone + ", objectif: " + goal;
+        const name = textInput.value.trim();
+        if (lang === "ar") {
+          textInput.value = "مرحبا، اسمي " + name + " وعمري " + age + " سنة. هاتفي: " + phone + ". هدفي: " + goal + ".";
+        } else {
+          textInput.value = "Bonjour, c'est " + name + " et mon age est " + age + " ans. Mon telephone: " + phone + ". Mon objectif: " + goal + ".";
+        }
       });
     });
   </script>
