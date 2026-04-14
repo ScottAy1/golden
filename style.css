@@ -125,6 +125,23 @@ p {
   display: inline-flex;
 }
 
+.lang-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
 .menu-toggle {
   display: none;
   width: 42px;
@@ -220,6 +237,10 @@ p {
   .desktop-nav,
   .desktop-btn {
     display: none;
+  }
+
+  .lang-toggle {
+    margin-left: auto;
   }
 
   .menu-toggle {
@@ -405,6 +426,7 @@ nav .nav-menu a:hover {
 }
 
 .hero-logo {
+  display: block;
   width: 100px;
   height: auto;
   margin: 0 auto 1.25rem;
@@ -675,6 +697,7 @@ nav .nav-menu a:hover {
   margin-bottom: 0.8rem;
   color: var(--text-muted);
   font-size: 0.95rem;
+  direction: ltr;
 }
 
 .rules-list i {
@@ -747,6 +770,67 @@ footer {
   margin: 0;
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .hero-section h1,
+html[dir="rtl"] .hero-tagline,
+html[dir="rtl"] .hero-kicker,
+html[dir="rtl"] .about-section p,
+html[dir="rtl"] .note,
+html[dir="rtl"] .map-text,
+html[dir="rtl"] .contact-item,
+html[dir="rtl"] .rules-list li {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .hero-section h1,
+html[dir="rtl"] .hero-tagline,
+html[dir="rtl"] .hero-kicker {
+  text-align: center;
+}
+
+html[dir="rtl"] .schedule-table table,
+html[dir="rtl"] .pricing-card,
+html[dir="rtl"] .facility,
+html[dir="rtl"] .contact-item p {
+  direction: rtl;
+}
+
+html[dir="rtl"] .contact-section h2,
+html[dir="rtl"] .contact-grid,
+html[dir="rtl"] .contact-item,
+html[dir="rtl"] .contact-item p {
+  text-align: center;
+}
+
+html[dir="rtl"] .contact-item a {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+html[dir="rtl"] .schedule-table td:nth-child(2),
+html[dir="rtl"] .schedule-table td:nth-child(3) {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .pricing-card ul li,
+html[dir="rtl"] .pricing-card .price {
+  text-align: right;
+}
+
+.ltr-inline {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+html[dir="rtl"] .rules-list li {
+  direction: rtl;
+  flex-direction: row;
 }
 
 /* Responsive adjustments */
