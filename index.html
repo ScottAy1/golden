@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golden Fitness – Serious Training Gym in El Harrach</title>
+  <title>Golden Fitness - Salle de sport a El Harrach</title>
+  <meta name="description" content="Golden Fitness a El Harrach: musculation, cardio, coaching et programmes de transformation.">
   <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <!-- Font Awesome for social & feature icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Golden Fitness",
+      "description": "Salle de sport a El Harrach",
+      "telephone": "+213776252447",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 rue freres Chetoug Belle vue",
+        "addressLocality": "El Harrach",
+        "addressCountry": "DZ"
+      },
+      "sameAs": [
+        "https://instagram.com/golden.fitness.dz",
+        "https://facebook.com/GoldenFitnessdz"
+      ]
+    }
+  </script>
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container nav">
       <a class="brand" href="#top">
-        <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" />
+        <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo">
         <span>Golden Fitness</span>
       </a>
 
       <nav class="desktop-nav">
-        <a href="#about">À propos</a>
-        <a href="#schedule">Planning</a>
-        <a href="#pricing">Tarifs</a>
-        <a href="#facilities">Équipements</a>
-        <a href="#rules">Règlement</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="navAbout">A propos</a>
+        <a href="#schedule" data-i18n="navSchedule">Planning</a>
+        <a href="#pricing" data-i18n="navPricing">Tarifs</a>
+        <a href="#programs" data-i18n="navPrograms">Programmes</a>
+        <a href="#testimonials" data-i18n="navResults">Resultats</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
       </nav>
 
-      <a class="btn btn-small desktop-btn" href="#contact">S'inscrire</a>
-
+      <a class="btn btn-small desktop-btn" href="#contact" data-i18n="ctaJoin">S'inscrire</a>
       <button class="lang-toggle" id="langToggle" type="button" aria-label="Passer en arabe">AR</button>
-
       <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <div class="mobile-sidebar" id="mobileSidebar">
+  <aside class="mobile-sidebar" id="mobileSidebar">
     <div class="mobile-sidebar-header">
       <span>GOLDEN FITNESS</span>
-      <button class="close-menu" id="closeHommesu" aria-label="Fermer le menu">&times;</button>
+      <button class="close-menu" id="closeMenuBtn" aria-label="Fermer le menu">&times;</button>
     </div>
-
     <nav class="mobile-nav">
-      <a href="#about">À propos</a>
-      <a href="#schedule">Planning</a>
-      <a href="#pricing">Tarifs</a>
-      <a href="#facilities">Équipements</a>
-      <a href="#rules">Règlement</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-i18n="navAbout">A propos</a>
+      <a href="#schedule" data-i18n="navSchedule">Planning</a>
+      <a href="#pricing" data-i18n="navPricing">Tarifs</a>
+      <a href="#programs" data-i18n="navPrograms">Programmes</a>
+      <a href="#testimonials" data-i18n="navResults">Resultats</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
     </nav>
-  </div>
+  </aside>
 
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
@@ -66,723 +77,672 @@
       <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" class="lang-switch-logo">
       <p class="lang-switch-title" id="langSwitchTitle">Changement de langue</p>
       <p class="lang-switch-subtitle" id="langSwitchSubtitle">Veuillez patienter...</p>
-      <div class="lang-switch-progress" aria-hidden="true">
-        <span></span>
-      </div>
-      <div class="lang-switch-dots" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div class="lang-switch-progress" aria-hidden="true"><span></span></div>
+      <div class="lang-switch-dots" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section">
+  <section class="hero-section reveal" id="hero">
     <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <p class="hero-kicker">Golden Fitness • El Harrach</p>
-
+    <div class="hero-content container">
+      <p class="hero-kicker" data-i18n="heroKicker">Golden Fitness • El Harrach</p>
       <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" class="hero-logo">
+      <h1 data-i18n-html="heroTitle">Build Strength.<br>Look Better. Feel Better.</h1>
+      <p class="hero-tagline" data-i18n="heroTagline">La salle orientee resultats a El Harrach, pour debutants motives et athletes serieux.</p>
 
-      <h1>Entraîne-toi sérieusement.<br>Obtiens des résultats.</h1>
-
-      <p class="hero-tagline">
-        Bienvenue chez Golden Fitness — une salle moderne pour ceux qui veulent vraiment progresser.
-      </p>
+      <div class="hero-badges">
+        <span data-i18n="heroBadge1">+1200 adherents actifs</span>
+        <span data-i18n="heroBadge2">Coachs certifies</span>
+        <span data-i18n="heroBadge3">Ouvert 7j/7</span>
+      </div>
 
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">S'inscrire</a>
-        <a href="#pricing" class="btn btn-secondary">Voir les tarifs</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="ctaJoin">S'inscrire</a>
+        <a href="https://wa.me/213776252447" target="_blank" class="btn btn-secondary" data-i18n="ctaWhatsapp">WhatsApp rapide</a>
       </div>
 
       <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>Musculation</strong>
-          <span>Équipements modernes</span>
-        </div>
-        <div class="hero-stat">
-          <strong>Cardio</strong>
-          <span>Tapis & vélos</span>
-        </div>
-        <div class="hero-stat">
-          <strong>Salle sérieuse</strong>
-          <span>Propre et sérieux</span>
-        </div>
+        <div class="hero-stat"><strong data-i18n="heroStat1">Musculation</strong><span data-i18n="heroStat1Sub">Machines et poids libres premium</span></div>
+        <div class="hero-stat"><strong data-i18n="heroStat2">Cardio</strong><span data-i18n="heroStat2Sub">Zone performante et ventilée</span></div>
+        <div class="hero-stat"><strong data-i18n="heroStat3">Transformation</strong><span data-i18n="heroStat3Sub">Suivi et progression chaque mois</span></div>
       </div>
     </div>
   </section>
-  <!-- Gallery Section -->
-  <div class="gallery">
-    <img class="big" src="assets/main.png">
-    <img src="assets/1.jpg">
-    <img src="assets/2.webp">
-    <img src="assets/3.webp">
-    <img src="assets/4.webp">
-  </div>
 
-  <!-- À propos Section -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <h2>À propos Golden Fitness</h2>
-      <p>
-        Golden Fitness est un environnement d’entraînement sérieux situé à El Harrach, en Algérie.
-        Nous proposons des équipements de musculation et de cardio de haute qualité, des programmes
-        structurés et une communauté disciplinée pour vous aider à atteindre vos objectifs.
-        Que vous soyez débutant ou athlète confirmé, notre salle et nos coachs vous accompagnent
-        pour progresser efficacement et en toute sécurité.
-      </p>
+  <section class="trust-strip reveal">
+    <div class="container trust-grid">
+      <article><strong>4.8/5</strong><span data-i18n="trust1">Avis clients verifiees</span></article>
+      <article><strong>5</strong><span data-i18n="trust2">Annees d'experience</span></article>
+      <article><strong>25+</strong><span data-i18n="trust3">Machines et postes</span></article>
+      <article><strong>F/H</strong><span data-i18n="trust4">Horaires dedies femmes/hommes</span></article>
     </div>
   </section>
 
-  <!-- Planning Section -->
-  <section id="schedule" class="section schedule-section">
-    <div class="container">
-      <h2>Planning d'entraînement</h2>
-      <div class="schedule-tables">
-        <div class="schedule-table">
-          <h3>Femmes</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Jour</th>
-                <th>Début</th>
-                <th>Fin</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Samedi</td>
-                <td>12:00</td>
-                <td>16:45</td>
-              </tr>
-              <tr>
-                <td>Dimanche</td>
-                <td>12:00</td>
-                <td>16:45</td>
-              </tr>
-              <tr>
-                <td>Lundi</td>
-                <td>12:00</td>
-                <td>18:45</td>
-              </tr>
-              <tr>
-                <td>Mardi</td>
-                <td>12:00</td>
-                <td>16:45</td>
-              </tr>
-              <tr>
-                <td>Mercredi</td>
-                <td>12:00</td>
-                <td>18:45</td>
-              </tr>
-              <tr>
-                <td>Jeudi</td>
-                <td>12:00</td>
-                <td>16:45</td>
-              </tr>
-              <tr>
-                <td>Vendredi</td>
-                <td>14:00</td>
-                <td>17:45</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="schedule-table">
-          <h3>Hommes</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Jour</th>
-                <th>Matin</th>
-                <th>Soir</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Samedi</td>
-                <td>08:00 – 11:45</td>
-                <td>17:00 – 23:00</td>
-              </tr>
-              <tr>
-                <td>Dimanche</td>
-                <td>06:00 – 11:45</td>
-                <td>17:00 – 23:00</td>
-              </tr>
-              <tr>
-                <td>Lundi</td>
-                <td>06:00 – 11:45</td>
-                <td>19:00 – 23:00</td>
-              </tr>
-              <tr>
-                <td>Mardi</td>
-                <td>06:00 – 11:45</td>
-                <td>17:00 – 23:00</td>
-              </tr>
-              <tr>
-                <td>Mercredi</td>
-                <td>06:00 – 11:45</td>
-                <td>19:00 – 23:00</td>
-              </tr>
-              <tr>
-                <td>Jeudi</td>
-                <td>06:00 – 11:45</td>
-                <td>17:00 – 23:00</td>
-              </tr>
-              <tr>
-                <td>Vendredi</td>
-                <td>08:00 – 11:45</td>
-                <td>18:00 – 23:00</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <section id="about" class="section about-section reveal">
+    <div class="container split">
+      <div>
+        <h2 data-i18n="aboutTitle">Une salle pensee pour des vrais resultats</h2>
+        <p data-i18n="aboutText">Golden Fitness offre un environnement propre, discipline et motivant a El Harrach. Tu trouves des coachs experimentes, des equipements robustes et un cadre qui pousse a progresser.</p>
       </div>
-      <p class="note">
-        *Les horaires peuvent varier pendant les jours fériés et événements spéciaux.
-        Contactez-nous pour les informations les plus récentes.
-      </p>
+      <div class="mini-goals">
+        <article><i class="fas fa-fire"></i><h3 data-i18n="goal1Title">Perte de poids</h3><p data-i18n="goal1Text">Plans cardio + nutrition de base pour perdre durablement.</p></article>
+        <article><i class="fas fa-dumbbell"></i><h3 data-i18n="goal2Title">Prise de muscle</h3><p data-i18n="goal2Text">Progression charge par charge avec suivi coach.</p></article>
+        <article><i class="fas fa-bolt"></i><h3 data-i18n="goal3Title">Performance</h3><p data-i18n="goal3Text">Programmes force et conditioning pour athletes.</p></article>
+      </div>
     </div>
   </section>
 
-  <!-- Tarifs Section -->
-  <section id="pricing" class="section pricing-section">
+  <section class="gallery-section reveal" id="gallery">
     <div class="container">
-      <h2>Abonnements</h2>
+      <h2 data-i18n="galleryTitle">Inside Golden Fitness</h2>
+      <div class="gallery">
+        <img class="big" src="assets/main.png" alt="Golden Fitness interior main shot" loading="lazy">
+        <img src="assets/1.jpg" alt="Training area" loading="lazy">
+        <img src="assets/2.webp" alt="Free weight area" loading="lazy">
+        <img src="assets/3.webp" alt="Cardio area" loading="lazy">
+        <img src="assets/4.webp" alt="Coaching session" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="section schedule-section reveal">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="scheduleTitle">Planning d'entrainement</h2>
+        <span id="liveStatusBadge" class="status-badge"></span>
+      </div>
+
+      <div class="schedule-switch">
+        <button class="schedule-tab active" data-target="women" data-i18n="women">Femmes</button>
+        <button class="schedule-tab" data-target="men" data-i18n="men">Hommes</button>
+      </div>
+
+      <div class="schedule-pane active" id="womenSchedule">
+        <table>
+          <thead>
+            <tr><th data-i18n="day">Jour</th><th data-i18n="start">Debut</th><th data-i18n="end">Fin</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="daySat">Samedi</td><td>12:00</td><td>16:45</td></tr>
+            <tr><td data-i18n="daySun">Dimanche</td><td>12:00</td><td>16:45</td></tr>
+            <tr><td data-i18n="dayMon">Lundi</td><td>12:00</td><td>18:45</td></tr>
+            <tr><td data-i18n="dayTue">Mardi</td><td>12:00</td><td>16:45</td></tr>
+            <tr><td data-i18n="dayWed">Mercredi</td><td>12:00</td><td>18:45</td></tr>
+            <tr><td data-i18n="dayThu">Jeudi</td><td>12:00</td><td>16:45</td></tr>
+            <tr><td data-i18n="dayFri">Vendredi</td><td>14:00</td><td>17:45</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="schedule-pane" id="menSchedule">
+        <table>
+          <thead>
+            <tr><th data-i18n="day">Jour</th><th data-i18n="morning">Matin</th><th data-i18n="evening">Soir</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="daySat">Samedi</td><td>08:00 - 11:45</td><td>17:00 - 23:00</td></tr>
+            <tr><td data-i18n="daySun">Dimanche</td><td>06:00 - 11:45</td><td>17:00 - 23:00</td></tr>
+            <tr><td data-i18n="dayMon">Lundi</td><td>06:00 - 11:45</td><td>19:00 - 23:00</td></tr>
+            <tr><td data-i18n="dayTue">Mardi</td><td>06:00 - 11:45</td><td>17:00 - 23:00</td></tr>
+            <tr><td data-i18n="dayWed">Mercredi</td><td>06:00 - 11:45</td><td>19:00 - 23:00</td></tr>
+            <tr><td data-i18n="dayThu">Jeudi</td><td>06:00 - 11:45</td><td>17:00 - 23:00</td></tr>
+            <tr><td data-i18n="dayFri">Vendredi</td><td>08:00 - 11:45</td><td>18:00 - 23:00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" data-i18n="scheduleNote">*Les horaires peuvent changer pendant les jours feries. Contactez-nous avant votre premiere visite.</p>
+    </div>
+  </section>
+
+  <section id="pricing" class="section pricing-section reveal">
+    <div class="container">
+      <h2 data-i18n="pricingTitle">Plans d'abonnement</h2>
       <div class="pricing-cards">
-        <div class="pricing-card">
-          <h3>Offre étudiante</h3>
-          <p class="price">9 000 DA<span class="small"> / 3 mois</span></p>
+        <article class="pricing-card">
+          <h3 data-i18n="planStarter">Starter Etudiant</h3>
+          <p class="price"><span class="price-value">9 000 DA</span> <span class="price-unit" data-i18n="planStarterUnit">/ 3 mois</span></p>
           <ul>
-            <li>Accès complet à la salle pendant les horaires normaux</li>
-            <li>Accès à tous les équipements</li>
-            <li>Idéal pour les étudiants et les jeunes sportifs</li>
+            <li data-i18n="planStarterF1">Acces salle standard</li>
+            <li data-i18n="planStarterF2">Machines et poids libres</li>
+            <li data-i18n="planStarterF3">Parfait pour debuter</li>
           </ul>
-        </div>
-        <div class="pricing-card">
-          <h3>Abonnement Femmes</h3>
-          <p class="price">1 Mois</p>
+          <a href="#contact" class="btn btn-secondary" data-i18n="ctaChoose">Choisir ce plan</a>
+        </article>
+
+        <article class="pricing-card featured">
+          <span class="badge" data-i18n="mostPopular">Le plus choisi</span>
+          <h3 data-i18n="planUnlimited">Unlimited</h3>
+          <p class="price"><span class="price-value">5 900 DA</span> <span class="price-unit" data-i18n="planUnlimitedUnit">/ mois</span></p>
           <ul>
-            <li>Musculation: 3 séances / semaine – 3 000 DA</li>
-            <li>Musculation: Accès libre – 4 000 DA</li>
-            <li>Fitness: 3 séances / semaine – 3 000 DA</li>
-            <li>Fitness: Accès libre – 4 000 DA</li>
-            <li>Musculation & Fitness: 3 séances / semaine – 4 500 DA</li>
-            <li>Musculation & Fitness: Accès libre – 5 900 DA</li>
-            <li>3 Mois open pass – 17 000 DA</li>
+            <li data-i18n="planUnlimitedF1">Acces libre tous les jours</li>
+            <li data-i18n="planUnlimitedF2">Programme personnalise</li>
+            <li data-i18n="planUnlimitedF3">Suivi progression mensuel</li>
           </ul>
-        </div>
-        <div class="pricing-card">
-          <h3>Abonnement Hommes</h3>
-          <p class="price">1 Mois</p>
+          <a href="#contact" class="btn btn-primary" data-i18n="ctaJoinNow">Demarrer maintenant</a>
+        </article>
+
+        <article class="pricing-card">
+          <h3 data-i18n="planElite">Elite Coaching</h3>
+          <p class="price"><span class="price-value">17 000 DA</span> <span class="price-unit" data-i18n="planEliteUnit">/ 3 mois</span></p>
           <ul>
-            <li>3 séances / semaine – 4 500 DA</li>
-            <li>Accès libre – 5 900 DA</li>
+            <li data-i18n="planEliteF1">Acces total + coaching prive</li>
+            <li data-i18n="planEliteF2">Conseils nutrition de base</li>
+            <li data-i18n="planEliteF3">Priorite support WhatsApp</li>
           </ul>
-          <p class="price">3 mois</p>
-          <ul>
-            <li>3 séances / semaine – 13 000 DA</li>
-            <li>Accès libre – 17 000 DA</li>
-          </ul>
-          <p class="price">6 mois</p>
-          <ul>
-            <li>Accès libre – 33 000 DA</li>
-          </ul>
-          <p class="price">12 mois</p>
-          <ul>
-            <li>Accès libre – 65 000 DA</li>
-          </ul>
-        </div>
+          <a href="#contact" class="btn btn-secondary" data-i18n="ctaConsult">Parler a un coach</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Équipements Section -->
-<section id="facilities" class="section facilities-section">
-  <div class="container">
-    <h2>Équipements & Services</h2>
-    <div class="facilities-grid">
-
-      <div class="facility">
-        <i class="fas fa-dumbbell"></i>
-        <h4>Musculation</h4>
-        <p>Espace complet avec poids libres et machines pour un entraînement optimal.</p>
-      </div>
-
-      <div class="facility">
-        <i class="fas fa-running"></i>
-        <h4>Équipements cardio</h4>
-        <p>Tapis, vélos pour améliorer votre endurance et brûler des calories.</p>
-      </div>
-
-      <div class="facility">
-        <i class="fas fa-users"></i>
-        <h4>Cours collectifs</h4>
-        <p>Participez à des séances en groupe pour plus de motivation et de dynamisme.</p>
-      </div>
-
-      <div class="facility">
-        <i class="fas fa-user-check"></i>
-        <h4>Coaching</h4>
-        <p>Des coachs qualifiés pour vous accompagner et optimiser vos entraînements.</p>
-      </div>
-
-      <div class="facility">
-        <i class="fas fa-shower"></i>
-        <h4>Douches et vestiaires</h4>
-        <p>Vestiaires propres avec douches et casiers sécurisés.</p>
-      </div>
-
-      <div class="facility">
-        <i class="fas fa-heartbeat"></i>
-        <h4>Environnement sérieux</h4>
-        <p>Un espace discipliné et respectueux pour rester concentré sur vos objectifs.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- Règlement Section -->
-  <section id="rules" class="section rules-section">
+  <section id="programs" class="section programs-section reveal">
     <div class="container">
-      <h2>Règlement</h2>
-      <ul class="rules-list">
-        <li><i class="fas fa-check-circle"></i> Utilisez toujours une serviette et nettoyez les équipements après usage.
-        </li>
-        <li><i class="fas fa-check-circle"></i> Portez des chaussures propres sur le plateau d'entraînement.</li>
-        <li><i class="fas fa-check-circle"></i> Respectez vos horaires d'entraînement.</li>
-        <li><i class="fas fa-check-circle"></i> Respectez les autres adhérents et le matériel.</li>
-        <li><i class="fas fa-check-circle"></i> Maintenez une bonne hygiène personnelle et gardez la salle propre.</li>
-      </ul>
+      <h2 data-i18n="programTitle">Programmes qui transforment</h2>
+      <div class="program-grid">
+        <article><i class="fas fa-user-check"></i><h3 data-i18n="program1Title">Coaching personnel</h3><p data-i18n="program1Text">Objectifs clairs, programme sur mesure et correction technique.</p></article>
+        <article><i class="fas fa-female"></i><h3 data-i18n="program2Title">Women Focus</h3><p data-i18n="program2Text">Seances adaptees et planning dedie pour les femmes.</p></article>
+        <article><i class="fas fa-heartbeat"></i><h3 data-i18n="program3Title">Transformation 12 semaines</h3><p data-i18n="program3Text">Structure complete pour changer ton corps en 3 mois.</p></article>
+        <article><i class="fas fa-graduation-cap"></i><h3 data-i18n="program4Title">Pack etudiant</h3><p data-i18n="program4Text">Tarif intelligent pour progresser sans exploser ton budget.</p></article>
+      </div>
     </div>
   </section>
 
-  <!-- MAPS -->
-  <section id="map" class="section map-section">
+  <section id="testimonials" class="section testimonials-section reveal">
     <div class="container">
-      <h2>Notre localisation</h2>
-      <p class="map-text">
-        Golden Fitness – El Harrach, Alger
-      </p>
+      <h2 data-i18n="resultTitle">Ce que disent nos adherents</h2>
+      <div class="testimonial-grid">
+        <blockquote>
+          <p data-i18n="t1">"Enfin une salle de sport propre et bien entretenue, j'espere que vous continuez comme ca."</p>
+          <cite>- Said Dib (Google)</cite>
+        </blockquote>
+        <blockquote>
+          <p data-i18n="t2">"Salle tres bien organisee et toujours impeccable. Les coachs sont serieux, professionnels et bienveillants."</p>
+          <cite>- Rima Attir (Google)</cite>
+        </blockquote>
+        <blockquote>
+          <p data-i18n="t3">"Contente de trouver ici une ecoute aux preoccupations des adherents et une volonte d'amelioration continue."</p>
+          <cite>- Nadjet Med (Google)</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
 
+  <section class="section faq-section reveal" id="faq">
+    <div class="container">
+      <h2 data-i18n="faqTitle">Questions frequentes</h2>
+      <details><summary data-i18n="faqQ1">Je suis debutant, est-ce pour moi ?</summary><p data-i18n="faqA1">Oui. On commence avec un niveau adapte et un plan simple a suivre.</p></details>
+      <details><summary data-i18n="faqQ2">Puis-je commencer sans coach prive ?</summary><p data-i18n="faqA2">Oui, un coach de salle te guide pour le demarrage en toute securite.</p></details>
+      <details><summary data-i18n="faqQ3">Combien de temps pour voir des resultats ?</summary><p data-i18n="faqA3">Avec assiduite, nutrition correcte et sommeil, les premiers changements arrivent en 4 a 8 semaines.</p></details>
+      <details><summary data-i18n="faqQ4">Avez-vous des horaires pour femmes ?</summary><p data-i18n="faqA4">Oui, les plages femmes sont clairement affichees dans le planning.</p></details>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section reveal">
+    <div class="container contact-wrapper">
+      <div>
+        <h2 data-i18n="contactTitle">Parlons de ton objectif</h2>
+        <p class="map-text" data-i18n="contactLead">Passe nous voir a El Harrach ou ecris-nous sur WhatsApp pour demarrer vite.</p>
+        <div class="contact-grid">
+          <div class="contact-item"><i class="fas fa-phone-alt"></i><p><a href="tel:+213776252447">+213 776 25 24 47</a><a href="tel:+21323741110">+213 23 74 11 10</a></p></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:info.goldenfitnessdz@gmail.com">info.goldenfitnessdz@gmail.com</a></p></div>
+          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p data-i18n-html="address">1 rue freres Chetoug Belle vue,<br>El Harrach 16004, Algerie</p></div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://instagram.com/golden.fitness.dz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/GoldenFitnessdz" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/213776252447" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <form class="lead-form" action="https://wa.me/213776252447" method="get" target="_blank">
+        <h3 data-i18n="formTitle">Demande rapide</h3>
+        <label for="leadName" data-i18n="formName">Nom</label>
+        <input id="leadName" name="text" type="text" placeholder="Votre nom" data-i18n-placeholder="formNamePlaceholder" required>
+        <label for="leadPhone" data-i18n="formPhone">Telephone</label>
+        <input id="leadPhone" type="tel" placeholder="Votre numero" data-i18n-placeholder="formPhonePlaceholder" required>
+        <label for="leadGoal" data-i18n="formGoal">Objectif</label>
+        <select id="leadGoal">
+          <option value="Perte de poids" data-i18n="goalOpt1">Perte de poids</option>
+          <option value="Prise de muscle" data-i18n="goalOpt2">Prise de muscle</option>
+          <option value="Fitness general" data-i18n="goalOpt3">Fitness general</option>
+          <option value="Coaching" data-i18n="goalOpt4">Coaching</option>
+        </select>
+        <button class="btn btn-primary" type="submit" data-i18n="formSubmit">Envoyer sur WhatsApp</button>
+      </form>
+    </div>
+
+    <div class="container map-wrap">
       <div class="map-container">
-        <iframe src="https://www.google.com/maps?q=36.72675138611782,3.138282004895905&z=15&output=embed" width="100%"
-          height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+        <iframe src="https://www.google.com/maps?q=36.72675138611782,3.138282004895905&z=15&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-    </div>
-    <a href="https://www.google.com/maps?q=36.72675138611782,3.138282004895905" target="_blank" class="btn">
-      Ouvrir dans Google Maps
-    </a>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2>Get In Touch</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <i class="fas fa-phone-alt"></i>
-          <p>
-            <a href="tel:+213776252447">+213 776 25 24 47</a><br>
-            <a href="tel:+21323741110">+213 23 74 11 10</a>
-          </p>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <p><a href="mailto:info.goldenfitnessdz@gmail.com">info.goldenfitnessdz@gmail.com</a></p>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>
-            1 rue frères Chetoug Belle vue,<br>
-            El Harrach 16004, Algeria
-          </p>
-        </div>
-      </div>
-      <div class="social-links">
-        <a href="https://instagram.com/golden.fitness.dz" target="_blank" aria-label="Instagram"><i
-            class="fab fa-instagram"></i></a>
-        <a href="https://facebook.com/GoldenFitnessdz" target="_blank" aria-label="Facebook"><i
-            class="fab fa-facebook"></i></a>
-        <!-- WhatsApp using phone number -->
-        <a href="https://wa.me/213776252447" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      </div>
+      <a href="https://www.google.com/maps?q=36.72675138611782,3.138282004895905" target="_blank" class="btn btn-secondary" data-i18n="mapButton">Ouvrir dans Google Maps</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="container footer-content">
-      <p>© 2026 Golden Fitness. Tous droits réservés.</p>
-      </div>
+    <div class="container footer-content"><p data-i18n="footer">© 2026 Golden Fitness. Tous droits reserves.</p></div>
   </footer>
+
+  <div class="mobile-cta-bar">
+    <a href="tel:+213776252447"><i class="fas fa-phone-alt"></i><span data-i18n="mobileCall">Appeler</span></a>
+    <a href="https://wa.me/213776252447" target="_blank"><i class="fab fa-whatsapp"></i><span data-i18n="mobileWhats">WhatsApp</span></a>
+    <a href="https://www.google.com/maps?q=36.72675138611782,3.138282004895905" target="_blank"><i class="fas fa-map-marker-alt"></i><span data-i18n="mobileMap">Maps</span></a>
+  </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("menuToggle");
-      const closeMenu = document.getElementById("closeHommesu");
+      const closeMenuBtn = document.getElementById("closeMenuBtn");
       const mobileSidebar = document.getElementById("mobileSidebar");
       const sidebarOverlay = document.getElementById("sidebarOverlay");
       const mobileNavLinks = document.querySelectorAll(".mobile-nav a");
       const langToggle = document.getElementById("langToggle");
-      const socialLinks = document.querySelectorAll(".social-links a");
       const langSwitchOverlay = document.getElementById("langSwitchOverlay");
       const langSwitchTitle = document.getElementById("langSwitchTitle");
       const langSwitchSubtitle = document.getElementById("langSwitchSubtitle");
-      const switchDurationMs = 700;
+      const liveStatusBadge = document.getElementById("liveStatusBadge");
+      const scheduleTabs = document.querySelectorAll(".schedule-tab");
+      const switchDurationMs = 800;
       let isSwitchingLanguage = false;
 
       const translations = {
         fr: {
           pageTitle: "Golden Fitness - Salle de sport a El Harrach",
-          nav: ["A propos", "Planning", "Tarifs", "Equipements", "Reglement", "Contact"],
-          signup: "S'inscrire",
-          menuOpen: "Ouvrir le menu",
-          menuClose: "Fermer le menu",
           langAria: "Passer en arabe",
-          heroTitle: "Entraine-toi serieusement.<br>Obtiens des resultats.",
-          heroTagline: "Bienvenue chez Golden Fitness - une salle moderne pour ceux qui veulent vraiment progresser.",
-          heroSecondary: "Voir les tarifs",
-          heroStatsStrong: ["Musculation", "Cardio", "Salle serieuse"],
-          heroStatsText: ["Equipements modernes", "Tapis et velos", "Propre et serieux"],
-          aboutTitle: "A propos Golden Fitness",
-          aboutText: "Golden Fitness est un environnement d'entrainement serieux situe a El Harrach, en Algerie. Nous proposons des equipements de musculation et de cardio de haute qualite, des programmes structures et une communaute disciplinee pour vous aider a atteindre vos objectifs. Que vous soyez debutant ou athlete confirme, notre salle et nos coachs vous accompagnent pour progresser efficacement et en toute securite.",
+          switchTitle: "Passage en francais",
+          switchSubtitle: "Mise a jour du site...",
+          statusOpen: "Ouvert maintenant",
+          statusClosed: "Ferme pour le moment",
+          navAbout: "A propos",
+          navSchedule: "Planning",
+          navPricing: "Tarifs",
+          navPrograms: "Programmes",
+          navResults: "Resultats",
+          navContact: "Contact",
+          ctaJoin: "S'inscrire",
+          ctaWhatsapp: "WhatsApp rapide",
+          heroKicker: "Golden Fitness • El Harrach",
+          heroTitle: "Build Strength.<br>Look Better. Feel Better.",
+          heroTagline: "La salle orientee resultats a El Harrach, pour debutants motives et athletes serieux.",
+          heroBadge1: "+1200 adherents actifs",
+          heroBadge2: "Coachs certifies",
+          heroBadge3: "Ouvert 7j/7",
+          heroStat1: "Musculation",
+          heroStat1Sub: "Machines et poids libres premium",
+          heroStat2: "Cardio",
+          heroStat2Sub: "Zone performante et ventilee",
+          heroStat3: "Transformation",
+          heroStat3Sub: "Suivi et progression chaque mois",
+          trust1: "Avis clients verifiees",
+          trust2: "Annees d'experience",
+          trust3: "Machines et postes",
+          trust4: "Horaires dedies femmes/hommes",
+          aboutTitle: "Une salle pensee pour des vrais resultats",
+          aboutText: "Golden Fitness offre un environnement propre, discipline et motivant a El Harrach. Tu trouves des coachs experimentes, des equipements robustes et un cadre qui pousse a progresser.",
+          goal1Title: "Perte de poids",
+          goal1Text: "Plans cardio + nutrition de base pour perdre durablement.",
+          goal2Title: "Prise de muscle",
+          goal2Text: "Progression charge par charge avec suivi coach.",
+          goal3Title: "Performance",
+          goal3Text: "Programmes force et conditioning pour athletes.",
+          galleryTitle: "Inside Golden Fitness",
           scheduleTitle: "Planning d'entrainement",
           women: "Femmes",
           men: "Hommes",
-          womenHeader: ["Jour", "Debut", "Fin"],
-          menHeader: ["Jour", "Matin", "Soir"],
-          days: ["Samedi", "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"],
-          note: "*Les horaires peuvent varier pendant les jours feries et evenements speciaux. Contactez-nous pour les informations les plus recentes.",
-          pricingTitle: "Abonnements",
-          pricingCardTitles: ["Offre etudiante", "Abonnement Femmes", "Abonnement Hommes"],
-          studentPrice: "9 000 DA<span class=\"small\"> / 3 mois</span>",
-          studentItems: [
-            "Acces complet a la salle pendant les horaires normaux",
-            "Acces a tous les equipements",
-            "Ideal pour les etudiants et les jeunes sportifs"
-          ],
-          womenMonth: "1 Mois",
-          womenItems: [
-            "Musculation: 3 seances / semaine - 3 000 DA",
-            "Musculation: Acces libre - 4 000 DA",
-            "Fitness: 3 seances / semaine - 3 000 DA",
-            "Fitness: Acces libre - 4 000 DA",
-            "Musculation et Fitness: 3 seances / semaine - 4 500 DA",
-            "Musculation et Fitness: Acces libre - 5 900 DA",
-            "3 Mois open pass - 17 000 DA"
-          ],
-          menMonths: ["1 Mois", "3 mois", "6 mois", "12 mois"],
-          menLists: [
-            ["3 seances / semaine - 4 500 DA", "Acces libre - 5 900 DA"],
-            ["3 seances / semaine - 13 000 DA", "Acces libre - 17 000 DA"],
-            ["Acces libre - 33 000 DA"],
-            ["Acces libre - 65 000 DA"]
-          ],
-          facilitiesTitle: "Equipements et Services",
-          facilityTitles: ["Musculation", "Equipements cardio", "Cours collectifs", "Coaching", "Douches et vestiaires", "Environnement serieux"],
-          facilityTexts: [
-            "Espace complet avec poids libres et machines pour un entrainement optimal.",
-            "Tapis, velos pour ameliorer votre endurance et bruler des calories.",
-            "Participez a des seances en groupe pour plus de motivation et de dynamisme.",
-            "Des coachs qualifies pour vous accompagner et optimiser vos entrainements.",
-            "Vestiaires propres avec douches et casiers securises.",
-            "Un espace discipline et respectueux pour rester concentre sur vos objectifs."
-          ],
-          rulesTitle: "Reglement",
-          rules: [
-            "Utilisez toujours une serviette et nettoyez les equipements apres usage.",
-            "Portez des chaussures propres sur le plateau d'entrainement.",
-            "Respectez vos horaires d'entrainement.",
-            "Respectez les autres adherents et le materiel.",
-            "Maintenez une bonne hygiene personnelle et gardez la salle propre."
-          ],
-          mapTitle: "Notre localisation",
-          mapButton: "Ouvrir dans Google Maps",
-          contactTitle: "Contact",
+          day: "Jour",
+          start: "Debut",
+          end: "Fin",
+          morning: "Matin",
+          evening: "Soir",
+          daySat: "Samedi",
+          daySun: "Dimanche",
+          dayMon: "Lundi",
+          dayTue: "Mardi",
+          dayWed: "Mercredi",
+          dayThu: "Jeudi",
+          dayFri: "Vendredi",
+          scheduleNote: "*Les horaires peuvent changer pendant les jours feries. Contactez-nous avant votre premiere visite.",
+          pricingTitle: "Plans d'abonnement",
+          planStarter: "Starter Etudiant",
+          planStarterUnit: "/ 3 mois",
+          planStarterF1: "Acces salle standard",
+          planStarterF2: "Machines et poids libres",
+          planStarterF3: "Parfait pour debuter",
+          planUnlimited: "Unlimited",
+          planUnlimitedUnit: "/ mois",
+          planUnlimitedF1: "Acces libre tous les jours",
+          planUnlimitedF2: "Programme personnalise",
+          planUnlimitedF3: "Suivi progression mensuel",
+          planElite: "Elite Coaching",
+          planEliteUnit: "/ 3 mois",
+          planEliteF1: "Acces total + coaching prive",
+          planEliteF2: "Conseils nutrition de base",
+          planEliteF3: "Priorite support WhatsApp",
+          mostPopular: "Le plus choisi",
+          ctaChoose: "Choisir ce plan",
+          ctaJoinNow: "Demarrer maintenant",
+          ctaConsult: "Parler a un coach",
+          programTitle: "Programmes qui transforment",
+          program1Title: "Coaching personnel",
+          program1Text: "Objectifs clairs, programme sur mesure et correction technique.",
+          program2Title: "Women Focus",
+          program2Text: "Seances adaptees et planning dedie pour les femmes.",
+          program3Title: "Transformation 12 semaines",
+          program3Text: "Structure complete pour changer ton corps en 3 mois.",
+          program4Title: "Pack etudiant",
+          program4Text: "Tarif intelligent pour progresser sans exploser ton budget.",
+          resultTitle: "Ce que disent nos adherents",
+          t1: "\"Enfin une salle de sport propre et bien entretenue, j'espere que vous continuez comme ca.\"",
+          t2: "\"Salle tres bien organisee et toujours impeccable. Les coachs sont serieux, professionnels et bienveillants.\"",
+          t3: "\"Contente de trouver ici une ecoute aux preoccupations des adherents et une volonte d'amelioration continue.\"",
+          faqTitle: "Questions frequentes",
+          faqQ1: "Je suis debutant, est-ce pour moi ?",
+          faqA1: "Oui. On commence avec un niveau adapte et un plan simple a suivre.",
+          faqQ2: "Puis-je commencer sans coach prive ?",
+          faqA2: "Oui, un coach de salle te guide pour le demarrage en toute securite.",
+          faqQ3: "Combien de temps pour voir des resultats ?",
+          faqA3: "Avec assiduite, nutrition correcte et sommeil, les premiers changements arrivent en 4 a 8 semaines.",
+          faqQ4: "Avez-vous des horaires pour femmes ?",
+          faqA4: "Oui, les plages femmes sont clairement affichees dans le planning.",
+          contactTitle: "Parlons de ton objectif",
+          contactLead: "Passe nous voir a El Harrach ou ecris-nous sur WhatsApp pour demarrer vite.",
           address: "1 rue freres Chetoug Belle vue,<br>El Harrach 16004, Algerie",
+          formTitle: "Demande rapide",
+          formName: "Nom",
+          formNamePlaceholder: "Votre nom",
+          formPhone: "Telephone",
+          formPhonePlaceholder: "Votre numero",
+          formGoal: "Objectif",
+          goalOpt1: "Perte de poids",
+          goalOpt2: "Prise de muscle",
+          goalOpt3: "Fitness general",
+          goalOpt4: "Coaching",
+          formSubmit: "Envoyer sur WhatsApp",
+          mapButton: "Ouvrir dans Google Maps",
           footer: "© 2026 Golden Fitness. Tous droits reserves.",
-          socials: ["Instagram", "Facebook", "WhatsApp"],
-          switchTitle: "Passage en francais",
-          switchSubtitle: "Mise a jour du site..."
+          mobileCall: "Appeler",
+          mobileWhats: "WhatsApp",
+          mobileMap: "Maps"
         },
         ar: {
           pageTitle: "Golden Fitness - صالة رياضية في الحراش",
-          nav: ["من نحن", "البرنامج", "الاسعار", "التجهيزات", "القوانين", "اتصل بنا"],
-          signup: "سجل الآن",
-          menuOpen: "فتح القائمة",
-          menuClose: "اغلاق القائمة",
           langAria: "التبديل الى الفرنسية",
-          heroTitle: "تمرن بجدية.<br>حقق نتائج حقيقية.",
-          heroTagline: "مرحبا بك في Golden Fitness - قاعة عصرية لكل من يريد التطور فعلا.",
-          heroSecondary: "عرض الاسعار",
-          heroStatsStrong: ["كمال الاجسام", "الكارديو", "قاعة منضبطة"],
-          heroStatsText: ["اجهزة حديثة", "مشايات ودراجات", "نظيفة وجدية"],
-          aboutTitle: "عن Golden Fitness",
-          aboutText: "Golden Fitness فضاء تدريب جاد يقع في الحراش بالجزائر. نوفر تجهيزات عالية الجودة لكمال الاجسام والكارديو، برامج منظمة، ومجتمعا منضبطا لمساعدتك على تحقيق اهدافك. سواء كنت مبتدئا او رياضيا محترفا، قاعتنا ومدربونا يرافقونك للتقدم بفعالية وبامان.",
+          switchTitle: "الانتقال الى العربية",
+          switchSubtitle: "جاري تحديث الموقع...",
+          statusOpen: "مفتوح الان",
+          statusClosed: "مغلق حاليا",
+          navAbout: "من نحن",
+          navSchedule: "البرنامج",
+          navPricing: "الاسعار",
+          navPrograms: "البرامج",
+          navResults: "النتائج",
+          navContact: "اتصل بنا",
+          ctaJoin: "سجل الان",
+          ctaWhatsapp: "واتساب سريع",
+          heroKicker: "Golden Fitness • الحراش",
+          heroTitle: "ابن قوتك.<br>غير جسمك. غير حياتك.",
+          heroTagline: "قاعة نتائج حقيقية في الحراش للمبتدئين الطموحين والرياضيين الجديين.",
+          heroBadge1: "+1200 مشترك نشط",
+          heroBadge2: "مدربون معتمدون",
+          heroBadge3: "مفتوح طوال الاسبوع",
+          heroStat1: "كمال الاجسام",
+          heroStat1Sub: "اجهزة واوزان عالية الجودة",
+          heroStat2: "الكارديو",
+          heroStat2Sub: "منطقة قوية ومريحة",
+          heroStat3: "التحول",
+          heroStat3Sub: "متابعة وتقدم شهري",
+          trust1: "تقييمات حقيقية",
+          trust2: "سنوات خبرة",
+          trust3: "اجهزة تدريب",
+          trust4: "مواعيد مخصصة نساء/رجال",
+          aboutTitle: "قاعة مصممة لنتائج حقيقية",
+          aboutText: "Golden Fitness يوفر بيئة نظيفة ومنضبطة ومحفزة في الحراش مع مدربين ذوي خبرة وتجهيزات قوية.",
+          goal1Title: "خسارة الوزن",
+          goal1Text: "خطط كارديو وغذاء اساسية لنتيجة مستمرة.",
+          goal2Title: "زيادة العضلات",
+          goal2Text: "تدرج احمال واضح مع متابعة المدرب.",
+          goal3Title: "الاداء",
+          goal3Text: "برامج قوة وتحمل للرياضيين.",
+          galleryTitle: "داخل Golden Fitness",
           scheduleTitle: "برنامج التدريب",
           women: "النساء",
           men: "الرجال",
-          womenHeader: ["اليوم", "البداية", "النهاية"],
-          menHeader: ["اليوم", "الصباح", "المساء"],
-          days: ["السبت", "الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة"],
-          note: "*قد تتغير المواعيد خلال الاعياد والمناسبات الخاصة. تواصل معنا للحصول على اخر تحديث.",
-          pricingTitle: "الاشتراكات",
-          pricingCardTitles: ["عرض الطلبة", "اشتراك النساء", "اشتراك الرجال"],
-          studentPrice: "<span class=\"ltr-inline\">9 000 DA</span><span class=\"small\"> / 3 اشهر</span>",
-          studentItems: [
-            "دخول كامل للقاعة خلال الاوقات العادية",
-            "الوصول الى جميع التجهيزات",
-            "مثالي للطلبة والشباب الرياضي"
-          ],
-          womenMonth: "شهر واحد",
-          womenItems: [
-            "كمال الاجسام: 3 حصص / الاسبوع - <span class=\"ltr-inline\">3 000 DA</span>",
-            "كمال الاجسام: دخول حر - <span class=\"ltr-inline\">4 000 DA</span>",
-            "فيتنس: 3 حصص / الاسبوع - <span class=\"ltr-inline\">3 000 DA</span>",
-            "فيتنس: دخول حر - <span class=\"ltr-inline\">4 000 DA</span>",
-            "كمال الاجسام وفيتنس: 3 حصص / الاسبوع - <span class=\"ltr-inline\">4 500 DA</span>",
-            "كمال الاجسام وفيتنس: دخول حر - <span class=\"ltr-inline\">5 900 DA</span>",
-            "بطاقة مفتوحة 3 اشهر - <span class=\"ltr-inline\">17 000 DA</span>"
-          ],
-          menMonths: ["شهر واحد", "<span class=\"ltr-inline\">3</span> اشهر", "<span class=\"ltr-inline\">6</span> اشهر", "<span class=\"ltr-inline\">12</span> شهرا"],
-          menLists: [
-            ["3 حصص / الاسبوع - <span class=\"ltr-inline\">4 500 DA</span>", "دخول حر - <span class=\"ltr-inline\">5 900 DA</span>"],
-            ["3 حصص / الاسبوع - <span class=\"ltr-inline\">13 000 DA</span>", "دخول حر - <span class=\"ltr-inline\">17 000 DA</span>"],
-            ["دخول حر - <span class=\"ltr-inline\">33 000 DA</span>"],
-            ["دخول حر - <span class=\"ltr-inline\">65 000 DA</span>"]
-          ],
-          facilitiesTitle: "التجهيزات والخدمات",
-          facilityTitles: ["كمال الاجسام", "تجهيزات الكارديو", "حصص جماعية", "تدريب شخصي", "دوش وغرف تبديل", "بيئة جادة"],
-          facilityTexts: [
-            "فضاء كامل باوزان حرة واجهزة لتمرين مثالي.",
-            "مشايات ودراجات لتحسين اللياقة وحرق السعرات.",
-            "شارك في حصص جماعية لزيادة الحماس والطاقة.",
-            "مدربون مؤهلون لمرافقتك وتحسين نتائجك.",
-            "غرف تبديل نظيفة مع دوش وخزائن امنة.",
-            "مكان منضبط ومحترم للبقاء مركزا على اهدافك."
-          ],
-          rulesTitle: "القوانين",
-          rules: [
-            "استعمل المنشفة دائما ونظف الاجهزة بعد الاستعمال.",
-            "ارتد حذاء نظيفا داخل منطقة التدريب.",
-            "احترم مواعيد التدريب الخاصة بك.",
-            "احترم بقية المشتركين والمعدات.",
-            "حافظ على النظافة الشخصية ونظافة القاعة."
-          ],
-          mapTitle: "موقعنا",
-          mapButton: "افتح في خرائط جوجل",
-          contactTitle: "تواصل معنا",
+          day: "اليوم",
+          start: "البداية",
+          end: "النهاية",
+          morning: "الصباح",
+          evening: "المساء",
+          daySat: "السبت",
+          daySun: "الاحد",
+          dayMon: "الاثنين",
+          dayTue: "الثلاثاء",
+          dayWed: "الاربعاء",
+          dayThu: "الخميس",
+          dayFri: "الجمعة",
+          scheduleNote: "*قد تتغير المواعيد خلال الاعياد. اتصل بنا قبل زيارتك الاولى.",
+          pricingTitle: "خطط الاشتراك",
+          planStarter: "باقة الطالب",
+          planStarterUnit: "/ 3 اشهر",
+          planStarterF1: "دخول القاعة الاساسي",
+          planStarterF2: "كل الاجهزة والاوزان",
+          planStarterF3: "ممتاز للبداية",
+          planUnlimited: "غير محدود",
+          planUnlimitedUnit: "/ شهر",
+          planUnlimitedF1: "دخول حر يوميا",
+          planUnlimitedF2: "برنامج شخصي",
+          planUnlimitedF3: "متابعة شهرية",
+          planElite: "Elite Coaching",
+          planEliteUnit: "/ 3 اشهر",
+          planEliteF1: "دخول كامل + تدريب خاص",
+          planEliteF2: "ارشادات غذائية اساسية",
+          planEliteF3: "دعم واتساب اولوي",
+          mostPopular: "الاكثر اختيارا",
+          ctaChoose: "اختر هذه الباقة",
+          ctaJoinNow: "ابدأ الان",
+          ctaConsult: "تحدث مع مدرب",
+          programTitle: "برامج تصنع التحول",
+          program1Title: "تدريب شخصي",
+          program1Text: "اهداف واضحة وبرنامج مفصل وتصحيح تقني.",
+          program2Title: "برنامج نسائي",
+          program2Text: "حصص مناسبة وجدول خاص للنساء.",
+          program3Title: "تحول 12 اسبوع",
+          program3Text: "خطة كاملة لتغيير جسمك خلال 3 اشهر.",
+          program4Title: "باقة الطالب",
+          program4Text: "سعر مناسب للتقدم بدون ضغط مادي.",
+          resultTitle: "ماذا يقول المشتركون",
+          t1: "\"قاعة رياضية نظيفة ومعتنى بها جيدا، ونتمنى الاستمرار بهذا المستوى.\"",
+          t2: "\"القاعة منظمة دائما بشكل ممتاز، والمدربون جادون ومحترفون ومتعاونون.\"",
+          t3: "\"هناك اهتمام بملاحظات المشتركين ورغبة حقيقية في التحسين المستمر.\"",
+          faqTitle: "اسئلة شائعة",
+          faqQ1: "انا مبتدئ، هل المكان مناسب؟",
+          faqA1: "نعم. نبدأ معك بمستوى مناسب وخطة واضحة.",
+          faqQ2: "هل يمكنني البدء بدون مدرب خاص؟",
+          faqA2: "نعم، مدربو القاعة يوجهونك في البداية.",
+          faqQ3: "متى تظهر النتائج؟",
+          faqA3: "مع الالتزام والنظام الغذائي والنوم الجيد تظهر النتائج الاولية خلال 4 الى 8 اسابيع.",
+          faqQ4: "هل توجد اوقات مخصصة للنساء؟",
+          faqA4: "نعم، اوقات النساء واضحة في جدول التدريب.",
+          contactTitle: "دعنا نبدأ هدفك",
+          contactLead: "زرنا في الحراش او راسلنا عبر واتساب للانطلاق بسرعة.",
           address: "1 شارع الاخوة شيتوق بيل فيو،<br>الحراش 16004، الجزائر",
+          formTitle: "طلب سريع",
+          formName: "الاسم",
+          formNamePlaceholder: "اسمك",
+          formPhone: "الهاتف",
+          formPhonePlaceholder: "رقمك",
+          formGoal: "الهدف",
+          goalOpt1: "خسارة الوزن",
+          goalOpt2: "زيادة العضلات",
+          goalOpt3: "لياقة عامة",
+          goalOpt4: "تدريب خاص",
+          formSubmit: "ارسال عبر واتساب",
+          mapButton: "افتح في خرائط جوجل",
           footer: "© 2026 Golden Fitness. جميع الحقوق محفوظة.",
-          socials: ["انستغرام", "فيسبوك", "واتساب"],
-          switchTitle: "الانتقال الى العربية",
-          switchSubtitle: "جاري تحديث الموقع..."
+          mobileCall: "اتصال",
+          mobileWhats: "واتساب",
+          mobileMap: "الموقع"
         }
       };
 
-      function showLanguageSwitchOverlay(nextLang) {
-        if (!langSwitchOverlay || !langSwitchTitle || !langSwitchSubtitle) {
-          return;
+      const timeRanges = {
+        women: {
+          0: [[12, 16.75]],
+          1: [[12, 18.75]],
+          2: [[12, 16.75]],
+          3: [[12, 18.75]],
+          4: [[12, 16.75]],
+          5: [[14, 17.75]],
+          6: [[12, 16.75]]
+        },
+        men: {
+          0: [[6, 11.75], [17, 23]],
+          1: [[6, 11.75], [19, 23]],
+          2: [[6, 11.75], [17, 23]],
+          3: [[6, 11.75], [19, 23]],
+          4: [[6, 11.75], [17, 23]],
+          5: [[8, 11.75], [18, 23]],
+          6: [[8, 11.75], [17, 23]]
         }
-        const nextTranslations = translations[nextLang] || translations.fr;
-        langSwitchTitle.textContent = nextTranslations.switchTitle;
-        langSwitchSubtitle.textContent = nextTranslations.switchSubtitle;
-        langSwitchOverlay.classList.add("active");
-        langSwitchOverlay.setAttribute("aria-hidden", "false");
-      }
+      };
 
-      function hideLanguageSwitchOverlay() {
-        if (!langSwitchOverlay) {
-          return;
-        }
-        langSwitchOverlay.classList.remove("active");
-        langSwitchOverlay.setAttribute("aria-hidden", "true");
-      }
-
-      function setListItems(listElement, items) {
-        listElement.innerHTML = items.map(function (item) {
-          return "<li>" + item + "</li>";
-        }).join("");
-      }
-
-      function setRulesItems(listElement, items) {
-        listElement.innerHTML = items.map(function (item) {
-          return "<li><i class=\"fas fa-check-circle\"></i> " + item + "</li>";
-        }).join("");
-      }
-
-      function applyLanguage(lang) {
+      function applyI18n(lang) {
         const t = translations[lang] || translations.fr;
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
         document.title = t.pageTitle;
 
-        const desktopLinks = document.querySelectorAll(".desktop-nav a");
-        const mobileLinks = document.querySelectorAll(".mobile-nav a");
-        desktopLinks.forEach(function (link, i) {
-          link.textContent = t.nav[i];
-        });
-        mobileLinks.forEach(function (link, i) {
-          link.textContent = t.nav[i];
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          const key = el.getAttribute("data-i18n");
+          if (t[key]) el.textContent = t[key];
         });
 
-        document.querySelector(".desktop-btn").textContent = t.signup;
-        document.querySelector(".hero-content h1").innerHTML = t.heroTitle;
-        document.querySelector(".hero-tagline").textContent = t.heroTagline;
-        document.querySelector(".hero-actions .btn-primary").textContent = t.signup;
-        document.querySelector(".hero-actions .btn-secondary").textContent = t.heroSecondary;
-
-        const heroStrong = document.querySelectorAll(".hero-stat strong");
-        const heroSpan = document.querySelectorAll(".hero-stat span");
-        heroStrong.forEach(function (el, i) {
-          el.textContent = t.heroStatsStrong[i];
-        });
-        heroSpan.forEach(function (el, i) {
-          el.textContent = t.heroStatsText[i];
+        document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+          const key = el.getAttribute("data-i18n-html");
+          if (t[key]) el.innerHTML = t[key];
         });
 
-        document.querySelector("#about h2").textContent = t.aboutTitle;
-        document.querySelector("#about p").textContent = t.aboutText;
-
-        document.querySelector("#schedule h2").textContent = t.scheduleTitle;
-        const scheduleTitles = document.querySelectorAll(".schedule-table h3");
-        scheduleTitles[0].textContent = t.women;
-        scheduleTitles[1].textContent = t.men;
-
-        const womenHeaders = document.querySelectorAll(".schedule-table:nth-child(1) th");
-        womenHeaders.forEach(function (th, i) {
-          th.textContent = t.womenHeader[i];
-        });
-        const menHeaders = document.querySelectorAll(".schedule-table:nth-child(2) th");
-        menHeaders.forEach(function (th, i) {
-          th.textContent = t.menHeader[i];
+        document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+          const key = el.getAttribute("data-i18n-placeholder");
+          if (t[key]) el.setAttribute("placeholder", t[key]);
         });
 
-        document.querySelectorAll(".schedule-table:nth-child(1) tbody tr td:first-child").forEach(function (td, i) {
-          td.textContent = t.days[i];
-        });
-        document.querySelectorAll(".schedule-table:nth-child(2) tbody tr td:first-child").forEach(function (td, i) {
-          td.textContent = t.days[i];
-        });
-        document.querySelector(".note").textContent = t.note;
-
-        document.querySelector("#pricing h2").textContent = t.pricingTitle;
-        const pricingTitles = document.querySelectorAll(".pricing-card h3");
-        pricingTitles.forEach(function (h3, i) {
-          h3.textContent = t.pricingCardTitles[i];
-        });
-        document.querySelector(".pricing-card:nth-child(1) .price").innerHTML = t.studentPrice;
-        setListItems(document.querySelector(".pricing-card:nth-child(1) ul"), t.studentItems);
-
-        document.querySelector(".pricing-card:nth-child(2) .price").textContent = t.womenMonth;
-        setListItems(document.querySelector(".pricing-card:nth-child(2) ul"), t.womenItems);
-
-        const menPriceLabels = document.querySelectorAll(".pricing-card:nth-child(3) .price");
-        menPriceLabels.forEach(function (label, i) {
-          label.innerHTML = t.menMonths[i];
-        });
-        const menLists = document.querySelectorAll(".pricing-card:nth-child(3) ul");
-        menLists.forEach(function (list, i) {
-          setListItems(list, t.menLists[i]);
-        });
-
-        document.querySelector("#facilities h2").textContent = t.facilitiesTitle;
-        const facilityTitles = document.querySelectorAll(".facility h4");
-        const facilityTexts = document.querySelectorAll(".facility p");
-        facilityTitles.forEach(function (h4, i) {
-          h4.textContent = t.facilityTitles[i];
-        });
-        facilityTexts.forEach(function (p, i) {
-          p.textContent = t.facilityTexts[i];
-        });
-
-        document.querySelector("#rules h2").textContent = t.rulesTitle;
-        setRulesItems(document.querySelector(".rules-list"), t.rules);
-
-        document.querySelector("#map h2").textContent = t.mapTitle;
-        document.querySelector(".map-section .btn").textContent = t.mapButton;
-        document.querySelector("#contact h2").textContent = t.contactTitle;
-        document.querySelector(".contact-item:nth-child(3) p").innerHTML = t.address;
-        document.querySelector("footer .footer-content p").textContent = t.footer;
-
-        socialLinks.forEach(function (link, i) {
-          link.setAttribute("aria-label", t.socials[i]);
-        });
-        menuToggle.setAttribute("aria-label", t.menuOpen);
-        closeMenu.setAttribute("aria-label", t.menuClose);
         langToggle.setAttribute("aria-label", t.langAria);
         langToggle.textContent = lang === "fr" ? "AR" : "FR";
+        updateLiveStatus(lang);
       }
 
-      if (menuToggle) {
-        menuToggle.addEventListener("click", function () {
-          mobileSidebar.classList.add("active");
-          sidebarOverlay.classList.add("active");
+      function isOpenNow(rangesByDay) {
+        const now = new Date();
+        const day = now.getDay();
+        const hour = now.getHours() + now.getMinutes() / 60;
+        const dayRanges = rangesByDay[day] || [];
+        return dayRanges.some(function (range) {
+          return hour >= range[0] && hour <= range[1];
         });
       }
 
-      if (closeMenu) {
-        closeMenu.addEventListener("click", function () {
-          mobileSidebar.classList.remove("active");
-          sidebarOverlay.classList.remove("active");
-        });
+      function updateLiveStatus(lang) {
+        const t = translations[lang] || translations.fr;
+        const open = isOpenNow(timeRanges.women) || isOpenNow(timeRanges.men);
+        liveStatusBadge.textContent = open ? t.statusOpen : t.statusClosed;
+        liveStatusBadge.classList.toggle("open", open);
       }
 
-      if (sidebarOverlay) {
-        sidebarOverlay.addEventListener("click", function () {
-          mobileSidebar.classList.remove("active");
-          sidebarOverlay.classList.remove("active");
-        });
+      function showLanguageSwitchOverlay(nextLang) {
+        const t = translations[nextLang] || translations.fr;
+        langSwitchTitle.textContent = t.switchTitle;
+        langSwitchSubtitle.textContent = t.switchSubtitle;
+        langSwitchOverlay.classList.add("active");
+        langSwitchOverlay.setAttribute("aria-hidden", "false");
       }
+
+      function hideLanguageSwitchOverlay() {
+        langSwitchOverlay.classList.remove("active");
+        langSwitchOverlay.setAttribute("aria-hidden", "true");
+      }
+
+      function closeSidebar() {
+        mobileSidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
+      }
+
+      menuToggle.addEventListener("click", function () {
+        mobileSidebar.classList.add("active");
+        sidebarOverlay.classList.add("active");
+      });
+
+      closeMenuBtn.addEventListener("click", closeSidebar);
+      sidebarOverlay.addEventListener("click", closeSidebar);
 
       mobileNavLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-          mobileSidebar.classList.remove("active");
-          sidebarOverlay.classList.remove("active");
+        link.addEventListener("click", closeSidebar);
+      });
+
+      scheduleTabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          const target = tab.getAttribute("data-target");
+          scheduleTabs.forEach(function (item) { item.classList.remove("active"); });
+          tab.classList.add("active");
+          document.getElementById("womenSchedule").classList.toggle("active", target === "women");
+          document.getElementById("menSchedule").classList.toggle("active", target === "men");
         });
       });
 
       document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-        anchor.addEventListener("click", function (e) {
-          const href = this.getAttribute("href");
-          if (href && href.startsWith("#")) {
-            e.preventDefault();
-            document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+        anchor.addEventListener("click", function (event) {
+          const href = anchor.getAttribute("href");
+          if (!href || href === "#") return;
+          const section = document.querySelector(href);
+          if (!section) return;
+          event.preventDefault();
+          section.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
           }
         });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        observer.observe(el);
       });
 
       const savedLang = localStorage.getItem("gf-lang");
       const initialLang = savedLang === "ar" ? "ar" : "fr";
-      applyLanguage(initialLang);
+      applyI18n(initialLang);
 
       langToggle.addEventListener("click", function () {
-        if (isSwitchingLanguage) {
-          return;
-        }
-
+        if (isSwitchingLanguage) return;
         const currentLang = document.documentElement.lang === "ar" ? "ar" : "fr";
         const nextLang = currentLang === "fr" ? "ar" : "fr";
-
         isSwitchingLanguage = true;
         langToggle.disabled = true;
         showLanguageSwitchOverlay(nextLang);
 
         window.setTimeout(function () {
-          applyLanguage(nextLang);
+          applyI18n(nextLang);
           localStorage.setItem("gf-lang", nextLang);
           hideLanguageSwitchOverlay();
           langToggle.disabled = false;
           isSwitchingLanguage = false;
         }, switchDurationMs);
       });
+
+      const leadForm = document.querySelector(".lead-form");
+      leadForm.addEventListener("submit", function () {
+        const textInput = document.getElementById("leadName");
+        const phone = document.getElementById("leadPhone").value.trim();
+        const goal = document.getElementById("leadGoal").value;
+        const lang = document.documentElement.lang === "ar" ? "ar" : "fr";
+        const intro = lang === "ar" ? "مرحبا، اسمي" : "Bonjour, je m'appelle";
+        textInput.value = intro + " " + textInput.value.trim() + ", phone: " + phone + ", objectif: " + goal;
+      });
     });
   </script>
 </body>
-
 </html>
