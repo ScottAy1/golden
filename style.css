@@ -233,6 +233,190 @@ p {
   visibility: visible;
 }
 
+.lang-switch-overlay {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(130% 100% at 12% 8%, #3f0910 0%, #1a0508 48%, #080808 100%),
+    linear-gradient(140deg, #050505 0%, #0f0f0f 55%, #141414 100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 5000;
+}
+
+.lang-switch-overlay::before,
+.lang-switch-overlay::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  pointer-events: none;
+}
+
+.lang-switch-overlay::before {
+  background:
+    radial-gradient(circle at 22% 30%, rgba(229, 9, 20, 0.32) 0 18%, rgba(229, 9, 20, 0) 52%),
+    radial-gradient(circle at 74% 68%, rgba(255, 100, 18, 0.2) 0 16%, rgba(255, 100, 18, 0) 50%);
+  filter: blur(8px);
+  animation: langAmbientShift 5.2s ease-in-out infinite alternate;
+}
+
+.lang-switch-overlay::after {
+  background: repeating-linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.04) 0,
+    rgba(255, 255, 255, 0.04) 2px,
+    rgba(255, 255, 255, 0) 2px,
+    rgba(255, 255, 255, 0) 16px
+  );
+  mix-blend-mode: soft-light;
+  opacity: 0.4;
+}
+
+.lang-switch-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.lang-switch-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.25rem;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: translateY(14px) scale(0.98);
+  transition: transform 0.3s ease;
+}
+
+.lang-switch-overlay.active .lang-switch-card {
+  transform: translateY(0) scale(1);
+}
+
+.lang-switch-ring {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(229, 9, 20, 0.45);
+  box-shadow: 0 0 0 8px rgba(229, 9, 20, 0.08), 0 0 40px rgba(229, 9, 20, 0.22);
+  animation: langRingPulse 1.2s ease-in-out infinite;
+}
+
+.lang-switch-logo {
+  position: relative;
+  z-index: 1;
+  width: 84px;
+  height: auto;
+  margin: 0 auto 1.1rem;
+  animation: langLogoFloat 0.9s ease-in-out infinite alternate;
+}
+
+.lang-switch-title {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+.lang-switch-subtitle {
+  margin: 0.35rem 0 0;
+  color: #f1d9d9;
+  font-size: clamp(0.92rem, 1.4vw, 1.02rem);
+}
+
+.lang-switch-dots {
+  display: inline-flex;
+  gap: 7px;
+  margin-top: 1rem;
+}
+
+.lang-switch-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation: langDotBounce 0.7s ease-in-out infinite;
+}
+
+.lang-switch-dots span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.lang-switch-dots span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes langLogoFloat {
+  from {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 0 rgba(229, 9, 20, 0.2));
+  }
+  to {
+    transform: translateY(-5px) scale(1.05);
+    filter: drop-shadow(0 10px 20px rgba(229, 9, 20, 0.35));
+  }
+}
+
+@keyframes langRingPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.92);
+    opacity: 0.55;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.92);
+    opacity: 0.55;
+  }
+}
+
+@keyframes langDotBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+@keyframes langAmbientShift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(1.8%, -1.2%, 0) scale(1.06);
+  }
+}
+
+.lang-toggle:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .desktop-nav,
   .desktop-btn {
@@ -254,6 +438,19 @@ p {
   .brand img {
     width: 38px;
     height: 38px;
+  }
+
+  .lang-switch-card {
+    padding: 1.6rem;
+  }
+
+  .lang-switch-ring {
+    width: 144px;
+    height: 144px;
+  }
+
+  .lang-switch-logo {
+    width: 76px;
   }
 }
 header {

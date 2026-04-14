@@ -59,6 +59,21 @@
   </div>
 
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="lang-switch-overlay" id="langSwitchOverlay" aria-hidden="true">
+    <div class="lang-switch-card" role="status" aria-live="polite">
+      <div class="lang-switch-ring"></div>
+      <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" class="lang-switch-logo">
+      <p class="lang-switch-title" id="langSwitchTitle">Changement de langue</p>
+      <p class="lang-switch-subtitle" id="langSwitchSubtitle">Veuillez patienter...</p>
+      <div class="lang-switch-dots" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
     <div class="hero-overlay"></div>
@@ -412,6 +427,10 @@
       const mobileNavLinks = document.querySelectorAll(".mobile-nav a");
       const langToggle = document.getElementById("langToggle");
       const socialLinks = document.querySelectorAll(".social-links a");
+      const langSwitchOverlay = document.getElementById("langSwitchOverlay");
+      const langSwitchTitle = document.getElementById("langSwitchTitle");
+      const langSwitchSubtitle = document.getElementById("langSwitchSubtitle");
+      let isSwitchingLanguage = false;
 
       const translations = {
         fr: {
@@ -483,7 +502,9 @@
           contactTitle: "Contact",
           address: "1 rue freres Chetoug Belle vue,<br>El Harrach 16004, Algerie",
           footer: "© 2026 Golden Fitness. Tous droits reserves.",
-          socials: ["Instagram", "Facebook", "WhatsApp"]
+          socials: ["Instagram", "Facebook", "WhatsApp"],
+          switchTitle: "Passage en francais",
+          switchSubtitle: "Mise a jour du site..."
         },
         ar: {
           pageTitle: "Golden Fitness - صالة رياضية في الحراش",
@@ -554,9 +575,30 @@
           contactTitle: "تواصل معنا",
           address: "1 شارع الاخوة شيتوق بيل فيو،<br>الحراش 16004، الجزائر",
           footer: "© 2026 Golden Fitness. جميع الحقوق محفوظة.",
-          socials: ["انستغرام", "فيسبوك", "واتساب"]
+          socials: ["انستغرام", "فيسبوك", "واتساب"],
+          switchTitle: "الانتقال الى العربية",
+          switchSubtitle: "جاري تحديث الموقع..."
         }
       };
+
+      function showLanguageSwitchOverlay(nextLang) {
+        if (!langSwitchOverlay || !langSwitchTitle || !langSwitchSubtitle) {
+          return;
+        }
+        const nextTranslations = translations[nextLang] || translations.fr;
+        langSwitchTitle.textContent = nextTranslations.switchTitle;
+        langSwitchSubtitle.textContent = nextTranslations.switchSubtitle;
+        langSwitchOverlay.classList.add("active");
+        langSwitchOverlay.setAttribute("aria-hidden", "false");
+      }
+
+      function hideLanguageSwitchOverlay() {
+        if (!langSwitchOverlay) {
+          return;
+        }
+        langSwitchOverlay.classList.remove("active");
+        langSwitchOverlay.setAttribute("aria-hidden", "true");
+      }
 
       function setListItems(listElement, items) {
         listElement.innerHTML = items.map(function (item) {
@@ -716,10 +758,24 @@
       applyLanguage(initialLang);
 
       langToggle.addEventListener("click", function () {
+        if (isSwitchingLanguage) {
+          return;
+        }
+
         const currentLang = document.documentElement.lang === "ar" ? "ar" : "fr";
         const nextLang = currentLang === "fr" ? "ar" : "fr";
-        applyLanguage(nextLang);
-        localStorage.setItem("gf-lang", nextLang);
+
+        isSwitchingLanguage = true;
+        langToggle.disabled = true;
+        showLanguageSwitchOverlay(nextLang);
+
+        window.setTimeout(function () {
+          applyLanguage(nextLang);
+          localStorage.setItem("gf-lang", nextLang);
+          hideLanguageSwitchOverlay();
+          langToggle.disabled = false;
+          isSwitchingLanguage = false;
+        }, 650);
       });
     });
   </script>
