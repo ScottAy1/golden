@@ -66,6 +66,9 @@
       <img src="assets/gf-logo-transparent.png" alt="Golden Fitness logo" class="lang-switch-logo">
       <p class="lang-switch-title" id="langSwitchTitle">Changement de langue</p>
       <p class="lang-switch-subtitle" id="langSwitchSubtitle">Veuillez patienter...</p>
+      <div class="lang-switch-progress" aria-hidden="true">
+        <span></span>
+      </div>
       <div class="lang-switch-dots" aria-hidden="true">
         <span></span>
         <span></span>
@@ -430,6 +433,7 @@
       const langSwitchOverlay = document.getElementById("langSwitchOverlay");
       const langSwitchTitle = document.getElementById("langSwitchTitle");
       const langSwitchSubtitle = document.getElementById("langSwitchSubtitle");
+      const switchDurationMs = 700;
       let isSwitchingLanguage = false;
 
       const translations = {
@@ -775,7 +779,7 @@
           hideLanguageSwitchOverlay();
           langToggle.disabled = false;
           isSwitchingLanguage = false;
-        }, 650);
+        }, switchDurationMs);
       });
     });
   </script>

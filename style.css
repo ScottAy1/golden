@@ -343,6 +343,31 @@ p {
   font-size: clamp(0.92rem, 1.4vw, 1.02rem);
 }
 
+.lang-switch-progress {
+  width: min(440px, 82vw);
+  height: 8px;
+  border-radius: 999px;
+  margin-top: 1.05rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.lang-switch-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, #e50914 0%, #ff6b00 45%, #ffe168 100%);
+  box-shadow: 0 0 14px rgba(255, 106, 0, 0.4);
+}
+
+.lang-switch-overlay.active .lang-switch-progress span {
+  animation: langSwitchProgress 0.7s cubic-bezier(0.17, 0.67, 0.25, 1) forwards;
+}
+
 .lang-switch-dots {
   display: inline-flex;
   gap: 7px;
@@ -409,6 +434,29 @@ p {
   }
   100% {
     transform: translate3d(1.8%, -1.2%, 0) scale(1.06);
+  }
+}
+
+@keyframes langSwitchProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lang-switch-ring,
+  .lang-switch-logo,
+  .lang-switch-dots span,
+  .lang-switch-overlay::before,
+  .lang-switch-overlay.active .lang-switch-progress span {
+    animation: none;
+  }
+
+  .lang-switch-progress span {
+    transform: scaleX(1);
   }
 }
 
