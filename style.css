@@ -805,6 +805,10 @@ html[dir="rtl"] .contact-item p {
   text-align: center;
 }
 
+html[dir="rtl"] .map-section .map-text {
+  text-align: center;
+}
+
 html[dir="rtl"] .contact-item a {
   direction: ltr;
   unicode-bidi: isolate;
