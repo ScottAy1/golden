@@ -1154,6 +1154,21 @@ html[dir="rtl"] .contact-item a {
     padding-top: 6.7rem;
   }
 
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+  }
+
+  .status-badge {
+    width: fit-content;
+    max-width: 100%;
+    white-space: nowrap;
+    line-height: 1.15;
+    padding: 0.42rem 0.72rem;
+    font-size: 0.78rem;
+  }
+
   .hero-badges {
     justify-content: center;
   }
