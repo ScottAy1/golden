@@ -356,6 +356,8 @@
           switchSubtitle: "Mise a jour du site...",
           statusOpen: "Ouvert maintenant",
           statusClosed: "Ferme pour le moment",
+          statusWomen: "Femmes",
+          statusMen: "Hommes",
           navAbout: "A propos",
           navSchedule: "Planning",
           navPricing: "Tarifs",
@@ -476,6 +478,8 @@
           switchSubtitle: "جاري تحديث الموقع...",
           statusOpen: "مفتوح الان",
           statusClosed: "مغلق حاليا",
+          statusWomen: "فترة النساء",
+          statusMen: "فترة الرجال",
           navAbout: "من نحن",
           navSchedule: "البرنامج",
           navPricing: "الاسعار",
@@ -648,11 +652,31 @@
         });
       }
 
+      function getCurrentScheduleType() {
+        const womenOpen = isOpenNow(timeRanges.women);
+        const menOpen = isOpenNow(timeRanges.men);
+
+        if (womenOpen && menOpen) return "both";
+        if (womenOpen) return "women";
+        if (menOpen) return "men";
+        return null;
+      }
+
       function updateLiveStatus(lang) {
         const t = translations[lang] || translations.fr;
-        const open = isOpenNow(timeRanges.women) || isOpenNow(timeRanges.men);
-        liveStatusBadge.textContent = open ? t.statusOpen : t.statusClosed;
+        const currentScheduleType = getCurrentScheduleType();
+        const open = currentScheduleType !== null;
+        const scheduleLabel = currentScheduleType === "women"
+          ? t.statusWomen
+          : currentScheduleType === "men"
+            ? t.statusMen
+            : "";
+
+        liveStatusBadge.textContent = open ? t.statusOpen + " · " + scheduleLabel : t.statusClosed;
         liveStatusBadge.classList.toggle("open", open);
+        liveStatusBadge.classList.toggle("women", currentScheduleType === "women");
+        liveStatusBadge.classList.toggle("men", currentScheduleType === "men");
+        liveStatusBadge.classList.remove("both");
       }
 
       function showLanguageSwitchOverlay(nextLang) {
@@ -721,6 +745,9 @@
       const savedLang = localStorage.getItem("gf-lang");
       const initialLang = savedLang === "ar" ? "ar" : "fr";
       applyI18n(initialLang);
+      window.setInterval(function () {
+        updateLiveStatus(document.documentElement.lang === "ar" ? "ar" : "fr");
+      }, 60000);
 
       langToggle.addEventListener("click", function () {
         if (isSwitchingLanguage) return;
