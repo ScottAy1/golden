@@ -39,6 +39,7 @@
 
       <nav class="desktop-nav">
         <a href="#about" data-i18n="navAbout">A propos</a>
+        <a href="#updates" data-i18n="navUpdates">Nouveautes & Supplements</a>
         <a href="#schedule" data-i18n="navSchedule">Planning</a>
         <a href="#pricing" data-i18n="navPricing">Tarifs</a>
         <a href="#programs" data-i18n="navPrograms">Programmes</a>
@@ -61,6 +62,7 @@
     </div>
     <nav class="mobile-nav">
       <a href="#about" data-i18n="navAbout">A propos</a>
+      <a href="#updates" data-i18n="navUpdates">Nouveautes & Supplements</a>
       <a href="#schedule" data-i18n="navSchedule">Planning</a>
       <a href="#pricing" data-i18n="navPricing">Tarifs</a>
       <a href="#programs" data-i18n="navPrograms">Programmes</a>
@@ -105,6 +107,21 @@
         <div class="hero-stat"><strong data-i18n="heroStat1">Musculation</strong><span data-i18n="heroStat1Sub">Machines et poids libres premium</span></div>
         <div class="hero-stat"><strong data-i18n="heroStat2">Cardio</strong><span data-i18n="heroStat2Sub">Zone performante et ventilée</span></div>
         <div class="hero-stat"><strong data-i18n="heroStat3">Transformation</strong><span data-i18n="heroStat3Sub">Suivi et progression chaque mois</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="updates" class="section updates-section reveal">
+    <div class="container">
+      <div class="updates-head">
+        <h2 data-i18n="navUpdates">Nouveautes & Supplements</h2>
+        <p data-i18n="updatesLead">Suivez nos arrivages et annonces en direct.</p>
+      </div>
+      <div class="updates-widget-shell">
+        <behold-widget feed-id="2x1QHUUa9EtDDSJuknSU"></behold-widget>
+      </div>
+      <div class="updates-cta-wrap">
+        <a href="https://instagram.com/golden.fitness.dz" target="_blank" rel="noopener" class="btn btn-secondary">Follow us on Instagram</a>
       </div>
     </div>
   </section>
@@ -333,6 +350,16 @@
   </div>
 
   <script>
+    (() => {
+      const d = document;
+      const s = d.createElement("script");
+      s.type = "module";
+      s.src = "https://w.behold.so/widget.js";
+      d.head.append(s);
+    })();
+  </script>
+
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("menuToggle");
       const closeMenuBtn = document.getElementById("closeMenuBtn");
@@ -359,6 +386,7 @@
           statusWomen: "Femmes",
           statusMen: "Hommes",
           navAbout: "A propos",
+          navUpdates: "Nouveautés & Suppléments",
           navSchedule: "Planning",
           navPricing: "Tarifs",
           navPrograms: "Programmes",
@@ -378,6 +406,7 @@
           heroStat2Sub: "Zone performante et ventilee",
           heroStat3: "Transformation",
           heroStat3Sub: "Suivi et progression chaque mois",
+          updatesLead: "Suivez nos arrivages et annonces en direct.",
           trust1: "Avis clients verifiees",
           trust2: "Annees d'experience",
           trust3: "Machines et postes",
@@ -481,6 +510,7 @@
           statusWomen: "فترة النساء",
           statusMen: "فترة الرجال",
           navAbout: "من نحن",
+          navUpdates: "آخر الأخبار والمكملات",
           navSchedule: "البرنامج",
           navPricing: "الاسعار",
           navPrograms: "البرامج",
@@ -500,6 +530,7 @@
           heroStat2Sub: "منطقة قوية ومريحة",
           heroStat3: "التحول",
           heroStat3Sub: "متابعة وتقدم شهري",
+          updatesLead: "تابعوا آخر منتجاتنا وعروضنا مباشرة.",
           trust1: "تقييمات حقيقية",
           trust2: "سنوات خبرة",
           trust3: "اجهزة تدريب",
@@ -745,6 +776,7 @@
       const savedLang = localStorage.getItem("gf-lang");
       const initialLang = savedLang === "ar" ? "ar" : "fr";
       applyI18n(initialLang);
+
       window.setInterval(function () {
         updateLiveStatus(document.documentElement.lang === "ar" ? "ar" : "fr");
       }, 60000);
