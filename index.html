@@ -118,7 +118,7 @@
         <p data-i18n="updatesLead">Suivez nos arrivages et annonces en direct.</p>
       </div>
       <div class="updates-widget-shell">
-        <behold-widget feed-id="2x1QHUUa9EtDDSJuknSU"></behold-widget>
+        <behold-widget feed-id="tA4ADBErOjx6bWB3tXNU"></behold-widget>
       </div>
       <div class="updates-cta-wrap">
         <a href="https://instagram.com/golden.fitness.dz" target="_blank" rel="noopener" class="btn btn-secondary">Follow us on Instagram</a>
@@ -172,6 +172,7 @@
       <div class="schedule-switch">
         <button class="schedule-tab active" data-target="women" data-i18n="women">Femmes</button>
         <button class="schedule-tab" data-target="men" data-i18n="men">Hommes</button>
+        <button class="schedule-tab" data-target="zumba" data-i18n="zumbaWomen">Zumba Femmes</button>
       </div>
 
       <div class="schedule-pane active" id="womenSchedule">
@@ -207,47 +208,131 @@
           </tbody>
         </table>
       </div>
+
+      <div class="schedule-pane" id="zumbaSchedule">
+        <table>
+          <thead>
+            <tr><th data-i18n="day">Jour</th><th>Heure</th><th>Classe</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="daySat">Samedi</td><td>14:00 - 15:00</td><td>Aerobie</td></tr>
+            <tr><td data-i18n="daySat">Samedi</td><td>15:00 - 16:00</td><td>Zumba</td></tr>
+            <tr><td data-i18n="daySun">Dimanche</td><td>14:30 - 15:30</td><td>Zumba</td></tr>
+            <tr><td data-i18n="daySun">Dimanche</td><td>15:30 - 16:30</td><td>Yoga</td></tr>
+            <tr><td data-i18n="dayMon">Lundi</td><td>16:45 - 17:45</td><td>C-A-F</td></tr>
+            <tr><td data-i18n="dayMon">Lundi</td><td>17:45 - 18:45</td><td>Body Sculpt</td></tr>
+            <tr><td data-i18n="dayTue">Mardi</td><td>14:00 - 15:00</td><td>Cardio Mix</td></tr>
+            <tr><td data-i18n="dayTue">Mardi</td><td>15:00 - 16:00</td><td>C-A-F</td></tr>
+            <tr><td data-i18n="dayWed">Mercredi</td><td>16:45 - 17:45</td><td>Body Pump</td></tr>
+            <tr><td data-i18n="dayWed">Mercredi</td><td>17:45 - 18:45</td><td>Body Step</td></tr>
+            <tr><td data-i18n="dayThu">Jeudi</td><td>14:30 - 15:30</td><td>Spinning + Abdos</td></tr>
+            <tr><td data-i18n="dayFri">Vendredi</td><td>15:00 - 16:00</td><td>Spinning</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p class="note" data-i18n="scheduleNote">*Les horaires peuvent changer pendant les jours feries. Contactez-nous avant votre premiere visite.</p>
     </div>
   </section>
 
   <section id="pricing" class="section pricing-section reveal">
     <div class="container">
-      <h2 data-i18n="pricingTitle">Plans d'abonnement</h2>
-      <div class="pricing-cards">
-        <article class="pricing-card">
-          <h3 data-i18n="planStarter">Starter Etudiant</h3>
-          <p class="price"><span class="price-value">9 000 DA</span> <span class="price-unit" data-i18n="planStarterUnit">/ 3 mois</span></p>
-          <ul>
-            <li data-i18n="planStarterF1">Acces salle standard</li>
-            <li data-i18n="planStarterF2">Machines et poids libres</li>
-            <li data-i18n="planStarterF3">Parfait pour debuter</li>
-          </ul>
-          <a href="#contact" class="btn btn-secondary" data-i18n="ctaChoose">Choisir ce plan</a>
+      <h2 data-i18n="pricingTitle">Tarifs</h2>
+      <p class="pricing-lead" data-i18n="pricingLead">Plans femmes, hommes et étudiants avec dossier d'inscription affiché juste en dessous.</p>
+
+      <div class="pricing-layout">
+        <article class="pricing-card pricing-card--women">
+          <div class="pricing-card-header">
+            <span class="pricing-tag" data-i18n="pricingWomenTag">Femmes</span>
+            <h3 data-i18n="pricingWomenTitle">Tarifs femmes</h3>
+          </div>
+
+          <div class="pricing-pack">
+            <div class="pricing-pack-title" data-i18n="pricingWomenPack1">1 mois - Musculation</div>
+            <div class="pricing-row"><span data-i18n="pricingSessions">3 F/S</span><strong>3000 DA</strong></div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>4000 DA</strong></div>
+          </div>
+
+          <div class="pricing-pack">
+            <div class="pricing-pack-title" data-i18n="pricingWomenPack2">1 mois - Fitness</div>
+            <div class="pricing-row"><span data-i18n="pricingSessions">3 F/S</span><strong>3000 DA</strong></div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>4000 DA</strong></div>
+          </div>
+
+          <div class="pricing-pack">
+            <div class="pricing-pack-title" data-i18n="pricingWomenPack3">1 mois - Musculation &amp; Fitness</div>
+            <div class="pricing-row"><span data-i18n="pricingSessions">3 F/S</span><strong>4500 DA</strong></div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>5900 DA</strong></div>
+          </div>
+
+          <div class="pricing-pack pricing-pack--highlight">
+            <div class="pricing-pack-title" data-i18n="pricingWomenPack4">3 mois</div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>17000 DA</strong></div>
+          </div>
         </article>
 
-        <article class="pricing-card featured">
-          <span class="badge" data-i18n="mostPopular">Le plus choisi</span>
-          <h3 data-i18n="planUnlimited">Unlimited</h3>
-          <p class="price"><span class="price-value">5 900 DA</span> <span class="price-unit" data-i18n="planUnlimitedUnit">/ mois</span></p>
-          <ul>
-            <li data-i18n="planUnlimitedF1">Acces libre tous les jours</li>
-            <li data-i18n="planUnlimitedF2">Programme personnalise</li>
-            <li data-i18n="planUnlimitedF3">Suivi progression mensuel</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary" data-i18n="ctaJoinNow">Demarrer maintenant</a>
+        <article class="pricing-card pricing-card--men">
+          <div class="pricing-card-header">
+            <span class="pricing-tag" data-i18n="pricingMenTag">Hommes</span>
+            <h3 data-i18n="pricingMenTitle">Tarifs hommes</h3>
+          </div>
+
+          <div class="pricing-pack">
+            <div class="pricing-pack-title" data-i18n="pricingMenPack1">1 mois</div>
+            <div class="pricing-row"><span data-i18n="pricingSessions">3 F/S</span><strong>4500 DA</strong></div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>5900 DA</strong></div>
+          </div>
+
+          <div class="pricing-pack">
+            <div class="pricing-pack-title" data-i18n="pricingMenPack2">3 mois</div>
+            <div class="pricing-row"><span data-i18n="pricingSessions">3 F/S</span><strong>13000 DA</strong></div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>17000 DA</strong></div>
+          </div>
+
+          <div class="pricing-pack">
+            <div class="pricing-pack-title" data-i18n="pricingMenPack3">6 mois</div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>33000 DA</strong></div>
+          </div>
+
+          <div class="pricing-pack">
+            <div class="pricing-pack-title" data-i18n="pricingMenPack4">12 mois</div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>65000 DA</strong></div>
+          </div>
         </article>
 
-        <article class="pricing-card">
-          <h3 data-i18n="planElite">Elite Coaching</h3>
-          <p class="price"><span class="price-value">17 000 DA</span> <span class="price-unit" data-i18n="planEliteUnit">/ 3 mois</span></p>
-          <ul>
-            <li data-i18n="planEliteF1">Acces total + coaching prive</li>
-            <li data-i18n="planEliteF2">Conseils nutrition de base</li>
-            <li data-i18n="planEliteF3">Priorite support WhatsApp</li>
-          </ul>
-          <a href="#contact" class="btn btn-secondary" data-i18n="ctaConsult">Parler a un coach</a>
+        <article class="pricing-card pricing-card--student">
+          <div class="pricing-card-header">
+            <span class="pricing-tag" data-i18n="pricingStudentTag">Étudiants</span>
+            <h3 data-i18n="pricingStudentTitle">Spécial étudiants</h3>
+          </div>
+
+          <div class="pricing-pack pricing-pack--highlight">
+            <div class="pricing-pack-title" data-i18n="pricingStudentPack1">1 mois</div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>3900 DA</strong></div>
+          </div>
+
+          <div class="pricing-pack pricing-pack--highlight">
+            <div class="pricing-pack-title" data-i18n="pricingStudentPack2">3 mois</div>
+            <div class="pricing-row"><span data-i18n="pricingOpen">OPEN</span><strong>9000 DA</strong></div>
+          </div>
+
+          <div class="pricing-pack pricing-pack--note">
+            <div class="pricing-pack-title" data-i18n="pricingStudentNoteTitle">Accès flexible</div>
+            <p data-i18n="pricingStudentNoteText">Tarif pensé pour les étudiants qui veulent s'entraîner sans casser leur budget.</p>
+          </div>
         </article>
+      </div>
+
+      <div class="dossier-box">
+        <div class="dossier-box-head">
+          <h3 data-i18n="dossierTitle">Dossier à fournir</h3>
+          <strong data-i18n="dossierFee">1500 DA frais d'inscription</strong>
+        </div>
+        <ul>
+          <li data-i18n="dossierItem1">Une photo</li>
+          <li data-i18n="dossierItem2">Copie de la pièce d'identité</li>
+          <li data-i18n="dossierItem3">Certificat médical</li>
+          <li data-i18n="dossierItem4">Certificat de scolarité pour les étudiants</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -423,6 +508,9 @@
           scheduleTitle: "Planning d'entrainement",
           women: "Femmes",
           men: "Hommes",
+          zumbaWomen: "Zumba Femmes",
+          statusZumbaWomen: "Zumba femmes",
+          statusMultiple: "Plusieurs plages",
           day: "Jour",
           start: "Debut",
           end: "Fin",
@@ -436,26 +524,34 @@
           dayThu: "Jeudi",
           dayFri: "Vendredi",
           scheduleNote: "*Les horaires peuvent changer pendant les jours feries. Contactez-nous avant votre premiere visite.",
-          pricingTitle: "Plans d'abonnement",
-          planStarter: "Starter Etudiant",
-          planStarterUnit: "/ 3 mois",
-          planStarterF1: "Acces salle standard",
-          planStarterF2: "Machines et poids libres",
-          planStarterF3: "Parfait pour debuter",
-          planUnlimited: "Unlimited",
-          planUnlimitedUnit: "/ mois",
-          planUnlimitedF1: "Acces libre tous les jours",
-          planUnlimitedF2: "Programme personnalise",
-          planUnlimitedF3: "Suivi progression mensuel",
-          planElite: "Elite Coaching",
-          planEliteUnit: "/ 3 mois",
-          planEliteF1: "Acces total + coaching prive",
-          planEliteF2: "Conseils nutrition de base",
-          planEliteF3: "Priorite support WhatsApp",
-          mostPopular: "Le plus choisi",
-          ctaChoose: "Choisir ce plan",
-          ctaJoinNow: "Demarrer maintenant",
-          ctaConsult: "Parler a un coach",
+          pricingTitle: "Tarifs",
+          pricingLead: "Plans femmes, hommes et étudiants avec dossier d'inscription affiché juste en dessous.",
+          pricingWomenTag: "Femmes",
+          pricingWomenTitle: "Tarifs femmes",
+          pricingWomenPack1: "1 mois - Musculation",
+          pricingWomenPack2: "1 mois - Fitness",
+          pricingWomenPack3: "1 mois - Musculation & Fitness",
+          pricingWomenPack4: "3 mois",
+          pricingMenTag: "Hommes",
+          pricingMenTitle: "Tarifs hommes",
+          pricingMenPack1: "1 mois",
+          pricingMenPack2: "3 mois",
+          pricingMenPack3: "6 mois",
+          pricingMenPack4: "12 mois",
+          pricingStudentTag: "Étudiants",
+          pricingStudentTitle: "Spécial étudiants",
+          pricingStudentPack1: "1 mois",
+          pricingStudentPack2: "3 mois",
+          pricingStudentNoteTitle: "Accès flexible",
+          pricingStudentNoteText: "Tarif pensé pour les étudiants qui veulent s'entraîner sans casser leur budget.",
+          pricingSessions: "3 F/S",
+          pricingOpen: "OPEN",
+          dossierFee: "1500 DA frais d'inscription",
+          dossierTitle: "Dossier à fournir",
+          dossierItem1: "Une photo",
+          dossierItem2: "Copie de la pièce d'identité",
+          dossierItem3: "Certificat médical",
+          dossierItem4: "Certificat de scolarité pour les étudiants",
           programTitle: "Programmes qui transforment",
           program1Title: "Coaching personnel",
           program1Text: "Objectifs clairs, programme sur mesure et correction technique.",
@@ -547,6 +643,9 @@
           scheduleTitle: "برنامج التدريب",
           women: "النساء",
           men: "الرجال",
+          zumbaWomen: "زومبا نسائية",
+          statusZumbaWomen: "زومبا نسائية",
+          statusMultiple: "عدة فترات",
           day: "اليوم",
           start: "البداية",
           end: "النهاية",
@@ -560,26 +659,34 @@
           dayThu: "الخميس",
           dayFri: "الجمعة",
           scheduleNote: "*قد تتغير المواعيد خلال الاعياد. اتصل بنا قبل زيارتك الاولى.",
-          pricingTitle: "خطط الاشتراك",
-          planStarter: "باقة الطالب",
-          planStarterUnit: "/ 3 اشهر",
-          planStarterF1: "دخول القاعة الاساسي",
-          planStarterF2: "كل الاجهزة والاوزان",
-          planStarterF3: "ممتاز للبداية",
-          planUnlimited: "غير محدود",
-          planUnlimitedUnit: "/ شهر",
-          planUnlimitedF1: "دخول حر يوميا",
-          planUnlimitedF2: "برنامج شخصي",
-          planUnlimitedF3: "متابعة شهرية",
-          planElite: "Elite Coaching",
-          planEliteUnit: "/ 3 اشهر",
-          planEliteF1: "دخول كامل + تدريب خاص",
-          planEliteF2: "ارشادات غذائية اساسية",
-          planEliteF3: "دعم واتساب اولوي",
-          mostPopular: "الاكثر اختيارا",
-          ctaChoose: "اختر هذه الباقة",
-          ctaJoinNow: "ابدأ الان",
-          ctaConsult: "تحدث مع مدرب",
+          pricingTitle: "الاسعار",
+          pricingLead: "خطط للنساء والرجال والطلاب مع ملف التسجيل بالاسفل.",
+          pricingWomenTag: "النساء",
+          pricingWomenTitle: "باقات النساء",
+          pricingWomenPack1: "شهر واحد - كمال الأجسام",
+          pricingWomenPack2: "شهر واحد - اللياقة",
+          pricingWomenPack3: "شهر واحد - كمال الأجسام واللياقة",
+          pricingWomenPack4: "3 أشهر",
+          pricingMenTag: "الرجال",
+          pricingMenTitle: "باقات الرجال",
+          pricingMenPack1: "شهر واحد",
+          pricingMenPack2: "3 أشهر",
+          pricingMenPack3: "6 أشهر",
+          pricingMenPack4: "12 شهر",
+          pricingStudentTag: "الطلاب",
+          pricingStudentTitle: "باقة الطلبة",
+          pricingStudentPack1: "شهر واحد",
+          pricingStudentPack2: "3 أشهر",
+          pricingStudentNoteTitle: "مرونة في الدخول",
+          pricingStudentNoteText: "سعر مناسب للطلاب الذين يريدون التدريب دون إرهاق ميزانيتهم.",
+          pricingSessions: "3 حصص",
+          pricingOpen: "دخول حر",
+          dossierFee: "1500 دج رسوم التسجيل",
+          dossierTitle: "الملف المطلوب",
+          dossierItem1: "صورة واحدة",
+          dossierItem2: "نسخة من بطاقة الهوية",
+          dossierItem3: "شهادة طبية",
+          dossierItem4: "شهادة مدرسية للطلاب",
           programTitle: "برامج تصنع التحول",
           program1Title: "تدريب شخصي",
           program1Text: "اهداف واضحة وبرنامج مفصل وتصحيح تقني.",
@@ -644,6 +751,15 @@
           4: [[6, 11.75], [17, 23]],
           5: [[8, 11.75], [18, 23]],
           6: [[8, 11.75], [17, 23]]
+        },
+        zumba: {
+          0: [[14, 16]],
+          1: [[14.5, 16.5]],
+          2: [[16.75, 18.75]],
+          3: [[14, 16]],
+          4: [[16.75, 18.75]],
+          5: [[14.5, 15.5]],
+          6: [[15, 16]]
         }
       };
 
@@ -684,13 +800,13 @@
       }
 
       function getCurrentScheduleType() {
-        const womenOpen = isOpenNow(timeRanges.women);
-        const menOpen = isOpenNow(timeRanges.men);
+        const openTypes = ["women", "men", "zumba"].filter(function (type) {
+          return isOpenNow(timeRanges[type]);
+        });
 
-        if (womenOpen && menOpen) return "both";
-        if (womenOpen) return "women";
-        if (menOpen) return "men";
-        return null;
+        if (!openTypes.length) return null;
+        if (openTypes.length > 1) return "both";
+        return openTypes[0];
       }
 
       function updateLiveStatus(lang) {
@@ -701,13 +817,17 @@
           ? t.statusWomen
           : currentScheduleType === "men"
             ? t.statusMen
-            : "";
+            : currentScheduleType === "zumba"
+              ? t.statusZumbaWomen
+              : currentScheduleType === "both"
+                ? t.statusMultiple
+                : "";
 
         liveStatusBadge.textContent = open ? t.statusOpen + " · " + scheduleLabel : t.statusClosed;
         liveStatusBadge.classList.toggle("open", open);
         liveStatusBadge.classList.toggle("women", currentScheduleType === "women");
         liveStatusBadge.classList.toggle("men", currentScheduleType === "men");
-        liveStatusBadge.classList.remove("both");
+        liveStatusBadge.classList.toggle("both", currentScheduleType === "both");
       }
 
       function showLanguageSwitchOverlay(nextLang) {
@@ -745,8 +865,10 @@
           const target = tab.getAttribute("data-target");
           scheduleTabs.forEach(function (item) { item.classList.remove("active"); });
           tab.classList.add("active");
-          document.getElementById("womenSchedule").classList.toggle("active", target === "women");
-          document.getElementById("menSchedule").classList.toggle("active", target === "men");
+          ["women", "men", "zumba"].forEach(function (type) {
+            const pane = document.getElementById(type + "Schedule");
+            if (pane) pane.classList.toggle("active", target === type);
+          });
         });
       });
 
